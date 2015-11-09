@@ -1,0 +1,153 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+
+#+TITLE: Introduction to Linux
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/stsb11/7-CS-LinuxIntro">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Introduction
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- An operating system is software that controls computer hardware and software.
+- There are many different operating systems you can use to control a computer; you're probably familiar with some of these already both on PC and mobile.
+   - Microsoft Windows 10
+   - Apple MacOS X El Capitan
+   - Google Chrome OS
+   - Apple iOS
+   - Google Android
+- One you may not have heard of is Linux. Unlike all the Operating Systems named above, this one isn't written by a company, but instead is written and maintained by individuals around the world, who collaborate together to produce a free, open-source platform for users.  
+- Open source means that anyone can look at the code the operating system runs on, see exactly how it works and modify it to meet their own requirements. 
+
+#+BEGIN_HTML 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yVpbFMhOAwE" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+[[file:img/linus.jpg]]
+- /(Picture courtesy of softpedia)/
+- Linux was released to the word in October 1991, when [[https://en.wikipedia.org/wiki/Linus_Torvalds][Linus Torvalds]] released his home-made operating system for others to use. 
+- A year after its release, Linus posted on an online newsgroup, requesting that anyone using his new OS should send him a postcard. He was inundated with postcards from around the world very quickly, leading his family to suspect that something big was happening!
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- Linux can be used in various different desktop environments, so it can be customised to look however you want. Users can install several at once, and have a different experience every time they boot their computer. 
+- Find screenshots on four of the following Linux desktop environments, and put them on a word document.
+   - GNOME
+   - Raspbian (used on Raspberry Pi computers)
+   - KDE
+   - Unity
+   - Xfce
+   - Cinnamon
+   - Xmonad
+   - MATE
+   - LXDE
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- There are now lots of different versions of Linux being developed, all with different strengths. The most popular at the moment is called 'Ubuntu' and is freely available for download on their website. 
+- Using the graphical front-end for Linux is a nice way to use the computer to browse the web, but things start to become much more interesting when we start using the =Terminal= to enter text commands directly into the computer. There'll be more on this in the coming lessons. 
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Answer as many of the following questions as possible to collect the badges.
+- *Silver:* One Linux distribution is 'Ubuntu'. Find out about three others, and write a sentence about what makes each unique. 
+- *Gold:* Write a short piece explaining the history of Linux. Include:
+   - What operating system it's based on,
+   - When it came out,
+   - At least 3 Linux facts.
+- *Platinum:* Linux users love to use the command line. Find out three different commands, and briefly explain what they do. 
