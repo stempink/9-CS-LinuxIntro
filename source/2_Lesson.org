@@ -130,12 +130,45 @@ cd 9-CS-LinuxIntro-files/treasure
 pwd
 #+end_src
 - Present Working Directory. Outputs the current directory you're in.
+- If you've followed the above instructions and try this, you' should see that you're currently working in...
+   - <SOMETHING>/9-CS-LinuxIntro-files/treasure_hunt
 
+
+#+begin_src
+cd NAME_OF_DIRECTORY
+#+end_src
+- Change Directory to somewhere else.
+- You can get a more detailed list if you use =ls -l= instead. 
+[[./img/ls-l.png]]
+- In the shot above, you can see the time and date when each file was last modified to the left of each file name.
+- Entries which are directories (like *pages* and *source*) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
+- The size of the file in bytes is shown to the left of the month the file was last modified.
+- The username and group of the person who created the file is shown here too.
+
+
+- At the moment, you should be able to see four directories, imaginatively called 'a', 'b', 'c' and 'd'. Let's Change Directory into a...
+- Type: =cd a=
+- Now let's LiSt the files in this directory. Type: =ls=
+- There are three text files in here. We'll have a look inside them in a moment.
+- For now though, we'll need to get back to the previous directory. This is done as follows:
+- =cd ..=
+- In Linux type Operating Systems, =..= means 'back one level'. You can use a few of them at a time to navigate around more quickly. E.g. =cd ../..= to drop back two directory levels, or =cd =../b= to drop back a level, then change into the =b= directory if you were already working inside =a=.
+- *Task:* Use =pwd= to get your bearings, then navigate into the =a= directory once more. 
+
+#+begin_src
+cat FILENAME
+#+end_src
+- This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
+- Assuming you're in the =a= directory, type =ls= to see whats in there.
+[[./img/cat.png]]
+- Let's see what's inside the 'otherfile.txt document. Type =cat ot= like in the screenshot above.
+- Linux users don't like to type too much - hit the =tab= key to auto-complete, then hit enter.
+- The contents of the file will now be displayed. 
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Write a set of rules for someone who has never played '21' before so that they will always win.
+- *Silver:* 
 - *Gold:* Write a working two-player game of 21 in Scratch. Upload a screenshot of your code AND the *.sb2* file to the upload points. 
 - *Platinum:* Implement a one-player version with a computer opponent. 
    - The computer should randomly choose to play either a 1, 2 or 3. 

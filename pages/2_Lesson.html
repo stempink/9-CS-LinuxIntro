@@ -149,15 +149,89 @@ pwd
 <ul class="org-ul">
 <li>Present Working Directory. Outputs the current directory you're in.
 </li>
+<li>If you've followed the above instructions and try this, you' should see that you're currently working in&#x2026;
+<ul class="org-ul">
+<li>&lt;SOMETHING&gt;/9-CS-LinuxIntro-files/treasure<sub>hunt</sub>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<pre class="example">
+cd NAME_OF_DIRECTORY
+</pre>
+<ul class="org-ul">
+<li>Change Directory to somewhere else.
+</li>
+<li>You can get a more detailed list if you use <code>ls -l</code> instead. 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/ls-l.png" alt="ls-l.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>In the shot above, you can see the time and date when each file was last modified to the left of each file name.
+</li>
+<li>Entries which are directories (like <b>pages</b> and <b>source</b>) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
+</li>
+<li>The size of the file in bytes is shown to the left of the month the file was last modified.
+</li>
+<li>The username and group of the person who created the file is shown here too.
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>At the moment, you should be able to see four directories, imaginatively called 'a', 'b', 'c' and 'd'. Let's Change Directory into a&#x2026;
+</li>
+<li>Type: <code>cd a</code>
+</li>
+<li>Now let's LiSt the files in this directory. Type: <code>ls</code>
+</li>
+<li>There are three text files in here. We'll have a look inside them in a moment.
+</li>
+<li>For now though, we'll need to get back to the previous directory. This is done as follows:
+</li>
+<li><code>cd ..</code>
+</li>
+<li>In Linux type Operating Systems, <code>..</code> means 'back one level'. You can use a few of them at a time to navigate around more quickly. E.g. <code>cd ../..</code> to drop back two directory levels, or <code>cd =../b</code> to drop back a level, then change into the <code>b</code> directory if you were already working inside <code>a</code>.
+</li>
+<li><b>Task:</b> Use <code>pwd</code> to get your bearings, then navigate into the <code>a</code> directory once more. 
+</li>
+</ul>
+
+<pre class="example">
+cat FILENAME
+</pre>
+<ul class="org-ul">
+<li>This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
+</li>
+<li>Assuming you're in the <code>a</code> directory, type <code>ls</code> to see whats in there.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/cat.png" alt="cat.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Let's see what's inside the 'otherfile.txt document. Type <code>cat ot</code> like in the screenshot above.
+</li>
+<li>Linux users don't like to type too much - hit the <code>tab</code> key to auto-complete, then hit enter.
+</li>
+<li>The contents of the file will now be displayed. 
+</li>
 </ul>
 </div>
 </div>
-
 <div id="outline-container-sec-1-3" class="outline-3 badge">
 <h3 id="sec-1-3">Badge It</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li><b>Silver:</b> Write a set of rules for someone who has never played '21' before so that they will always win.
+<li><b>Silver:</b> 
 </li>
 <li><b>Gold:</b> Write a working two-player game of 21 in Scratch. Upload a screenshot of your code AND the <b>.sb2</b> file to the upload points. 
 </li>
