@@ -130,8 +130,8 @@ cd 9-CS-LinuxIntro-files/treasure
 pwd
 #+end_src
 - Present Working Directory. Outputs the current directory you're in.
-- If you've followed the above instructions and try this, you' should see that you're currently working in...
-   - <SOMETHING>/9-CS-LinuxIntro-files/treasure_hunt
+- If you've followed the above instructions and try this, you should see that you're currently working in...
+   - =<SOMETHING>/9-CS-LinuxIntro-files/treasure_hunt=
 
 
 #+begin_src
@@ -146,7 +146,7 @@ cd NAME_OF_DIRECTORY
 - The username and group of the person who created the file is shown here too.
 
 
-- At the moment, you should be able to see four directories, imaginatively called 'a', 'b', 'c' and 'd'. Let's Change Directory into a...
+- At the moment, you should be able to see four directories, imaginatively called =a=, =b=, =c= and =d=. Let's Change Directory into a...
 - Type: =cd a=
 - Now let's LiSt the files in this directory. Type: =ls=
 - There are three text files in here. We'll have a look inside them in a moment.
@@ -161,15 +161,13 @@ cat FILENAME
 - This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
 - Assuming you're in the =a= directory, type =ls= to see whats in there.
 [[./img/cat.png]]
-- Let's see what's inside the 'otherfile.txt document. Type =cat ot= like in the screenshot above.
-- Linux users don't like to type too much - hit the =tab= key to auto-complete, then hit enter.
+- Let's see what's inside the =otherfile.txt= document. Type =cat ot= like in the screenshot above.
+- Linux users don't like to type too much - as there are no other files in here that start with =ot=, you can hit the =tab= key to auto-complete (you'll want to do this a lot once you get used to it), then hit enter to run the command.
 - The contents of the file will now be displayed. 
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* 
-- *Gold:* Write a working two-player game of 21 in Scratch. Upload a screenshot of your code AND the *.sb2* file to the upload points. 
-- *Platinum:* Implement a one-player version with a computer opponent. 
-   - The computer should randomly choose to play either a 1, 2 or 3. 
-   - If you can do this, see if you can implement a strategy that means the computer will always win when it goes first.
+- *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. Copy and paste the passcode into a text file and upload it to collect this badge.
+- *Gold:* Under the passcode, add a short explanation of what =ls=, =cd= and =pwd= do in a Linux terminal. 
+- *Platinum:* Make a new directory called 'LinuxChamp' inside the =a= directory, and move one of the joke files from the =a= directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
