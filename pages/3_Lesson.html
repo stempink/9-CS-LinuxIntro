@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>emacs</title>
+<title>Fab Files</title>
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -59,7 +59,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">emacs</h1>
+<h1 class="title">Fab Files</h1>
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
       <a href="https://github.com/stsb11/9-CS-LinuxIntro">Fork me on GitHub</a>
@@ -70,6 +70,7 @@ for the JavaScript code in this tag.
       <li><a href="1_Lesson.html">Week1</a></li>
       <li><a href="2_Lesson.html">Week2</a></li>
       <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
       <li><a href="assessment.html">Assessment</a></li>
     </ul>
   </div>
@@ -81,172 +82,314 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-1">Learn It</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>When on a computer system, users will need to be able to edit files. 
+<li>Let's get to grips with understanding how files are organised on UNIX/Linux/MacOS systems.
 </li>
-<li>Most files contain plain text with no images of video embedded in them (e.g. HTML files, .txt files, .py files). These can be modified by programs called text editors.
+<li>The entire system starts in a <code>root</code> drectory, which has several directories inside it&#x2026;
 </li>
-<li>There are various text editors available on Linux systems, and hackers typically have <a href="https://stallman.org/saint.html">strong feelings</a> about their favourite. 
-</li>
-<li>Some examples are:
+</ul>
+
+<div class="figure">
+<p><img src="./img/4_1.png" alt="4_1.png" />
+</p>
+</div>
 <ul class="org-ul">
-<li>Nano
+<li><code>/bin</code>: The user's binaries (programs).
 </li>
-<li>vim
+<li><code>/sbin</code>: Programs that help the computer system run
 </li>
-<li>emacs (always with a lower case e)
+<li><code>/home</code>: The user's files (the same as 'My Documents' on Windows)
 </li>
-<li>gedit
+<li><code>/lost+found</code>: When the system disk is checked, any stray file fragments are stowed in here. 
+</li>
+<li><code>/root</code>: root is a special admin user of the system, who can do anything to the system. Their files live in here. Hackers will often try to hack the root password, as this would give them unlimited access to every file on the system. 
+</li>
+<li><code>/tmp</code>: Any temporary files the system makes are stored in here, and (ideally) deleted once they're done with.
+</li>
+<li><code>/boot</code>: These are files that the system needs when it's first powered up.
+</li>
+<li><code>/media</code>: Any devices plugged into the computer (e.g. CD-ROMs, DVDs, USB Memory sticks) appear here.
+</li>
+<li><code>/mnt</code>: Unlike Windows (where different drives appear as letters of the alphabet (e.g. C:\, G:\), on UNIX-type systems you mount different devices as folders on your computer when you access them. 
+</li>
+<li><code>/var</code>: Variable files. This is where the system writes data while its working. Web servers often store their data in the <code>/var/www</code> directory, for instance. 
+</li>
+<li><code>/dev</code>: This directory shows a list of devices attached to the computer (e.g. printers, hard disks, monitors&#x2026;)
 </li>
 </ul>
+
+
+<ul class="org-ul">
+<li>There are several others too. <code>opt</code>, <code>proc</code>, <code>lib</code> and others all have important roles in the system. We'll tend to do all our work in <code>/home</code>.
 </li>
-<li>The Internet community is <a href="https://en.wikipedia.org/wiki/Editor_war">divided</a> as to whether emacs or vim is better.
-</li>
-<li>You can make your own mind up on this. We use emacs to author everything you see on <a href="https://www.bournetocode.com">BourneToCode.com</a> and <a href="https://www.bournetoinvent.com">BourneToInvent.com</a> though. 
-</li>
-<li>Although originally written for UNIX-like systems, most of the above editors are also availale for other operating systems, like Windows. 
+<li>Incidentally, you can use <code>~</code> as a shortcut for your own home drive at any time. You could type <code>cd ~</code> to jump straight to your home directory, for instance.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 learn">
-<h3 id="sec-1-2">Learn It</h3>
+
+<div id="outline-container-sec-1-2" class="outline-3 try">
+<h3 id="sec-1-2">Try It</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
-<li>Emacs was written back in 1976 by a software engineer called Richard Stallman. He's quite the character in his own right; you can read more about him on his <a href="https://en.wikipedia.org/wiki/Richard_Stallman">Wikipedia page</a>. 
+<li>Today, we'll learn to move files around on the system and how to pick up files from the web when we need new things.
+</li>
+<li>There a few commands we'll learn today&#x2026; 
 </li>
 </ul>
 
-<div class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Emacs_Dired_buffers.png" alt="Emacs_Dired_buffers.png" />
-</p>
-</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Command</th>
+<th scope="col" class="left">Usage</th>
+<th scope="col" class="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left"><code>mkdir</code></td>
+<td class="left"><code>mkdir newFolder</code></td>
+<td class="left">Makes a new directory</td>
+</tr>
+
+<tr>
+<td class="left"><code>mv</code></td>
+<td class="left"><code>move source destination</code></td>
+<td class="left">Moves a file from location a to b</td>
+</tr>
+
+<tr>
+<td class="left"><code>cp</code></td>
+<td class="left"><code>copy source destination</code></td>
+<td class="left">Copies files/directories</td>
+</tr>
+
+<tr>
+<td class="left"><code>touch</code></td>
+<td class="left"><code>touch filename.txt</code></td>
+<td class="left">Creates a new empty file</td>
+</tr>
+
+<tr>
+<td class="left"><code>rm</code></td>
+<td class="left"><code>rm filename.txt</code></td>
+<td class="left">Removes (deletes) a file</td>
+</tr>
+</tbody>
+</table>
+
 <ul class="org-ul">
-<li>Despite being nearly 40 years old, emacs continues to be actively developed by the online community, and is one of the oldest computer applications in the World still in active use.
+<li>Once you can do all the things we've done in this unit, you're in pretty good shape to do useful work on a computer.
+</li>
+<li>We'll have a quick go at using some files, then you'll do some work by yourself to collect the badge. We'll use the files we picked up from the web in lesson 2.
+</li>
+<li>Type (or copy and paste) this line:
 </li>
 </ul>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3 try">
-<h3 id="sec-1-3">Learn It</h3>
-<div class="outline-text-3" id="text-1-3">
-<ul class="org-ul">
-<li>emacs was written for an era in computer science where the keyboard was the only way to enter commands onto a computer and graphics consisted of text appearing on a text-only terminal. 
-</li>
-<li>While superficially, it might seem daunting to enter text without a mouse, but many professional developers find that when one works without ever having to take their hands off the keyboard, they are able to work far more quickly. 
-</li>
-</ul>
-
-<div class="figure">
-<p><img src="./img/3_1.png" alt="3_1.png" />
-</p>
-</div>
-<ul class="org-ul">
-<li>Load up emacs either by loading it from the applications menu or by typing <code>emacs</code> in the terminal. They both work the same way, but the version you load with the mouse will also allow you to use the mouse to navigate around documents. The screen will look like the image above.
-</li>
-</ul>
-
-
-<ul class="org-ul">
-<li>We'll create a quick web page to get to grips with working on a file.
-</li>
-<li>emacs uses (about 2000) keyboard shortcuts to allow users to achieve all manner of activities. We'll only need a tiny number of these to get some productive work done. 
-</li>
-<li>In emacs, shortcuts are either achieved by holding the Control key and pressing another key, or holding the meta key (Alt) and tapping another key. 
-</li>
-<li>The shorthand for this looks like this: C-x C-f.
-</li>
-<li>This would mean to Hold Control and tap <code>x</code>, then to hold Control and tap <code>f</code>. You don't need to release the control key each time, but you can if you want to.
-</li>
-<li>Type <code>C-x, C-f</code> which is the combination to open a new file.
-</li>
-</ul>
-
-<div class="figure">
-<p><img src="./img/3_2.png" alt="3_2.png" />
-</p>
-</div>
-<ul class="org-ul">
-<li>At the bottom of the screen, the computer will show you the <code>~/</code> prompt, which is inviting you to enter the name of the file you'd like to open or create. 
-</li>
-<li>Type <code>newfile.html</code> and hit enter to make a new, empty HTML file.
-</li>
-<li>Paste this into the new, empty document&#x2026;
-</li>
-</ul>
-
 <pre class="example">
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;
-I'm a l33t Ha&gt;&lt;0r
-&lt;/title&gt;
-
-&lt;body&gt;
-Computer Science ftw!
-&lt;/body&gt;
-
-&lt;/html&gt;
+cd ~/Documents/Linux_Work/9-CS-LinuxIntro-files/moveIt
 </pre>
 
 <ul class="org-ul">
-<li>Save the work with <code>C-x, C-s</code>.
+<li><b>NOTE:</b> If the command above gives an error, copy/paste these next lines, then try the one above again.
 </li>
-<li></li>
+</ul>
+<pre class="example">
+cd ~/Documents
+mkdir Linux_Work
+cd Linux_Work
+git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3 code">
+<h3 id="sec-1-3">Copy It</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Let's start by listing what's in this directory, by typing <code>ls -l</code>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/4_2a.png" alt="4_2a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You'll hopefully spot that there are two directories (<code>secretDir</code> and <code>otherDir</code>) and a text file called <code>fileA.txt</code>. 
+</li>
+<li>To avoid any problems, let's start by making a copy of the text file.
+</li>
+<li>Type: <code>cp fileA.txt fileB.txt</code>
+</li>
+<li>If you do <code>ls</code> again, you'll see you've now got a new file.
+</li>
+<li>We could put a copy in another folder if we'd wanted&#x2026;
+</li>
+<li>Type: <code>cp fileA.txt ./otherDir/anotherOne.txt</code>
+</li>
+<li>If you <code>cd</code> into the <code>otherDir</code>, and do <code>ls</code> you'll see a copy of the file in there too.
+</li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-sec-1-4" class="outline-3 code">
-<h3 id="sec-1-4">Code It</h3>
+<h3 id="sec-1-4">Move It</h3>
 <div class="outline-text-3" id="text-1-4">
 <ul class="org-ul">
-<li>In a new browser tab, open <a href="https://scratch.mit.edu/projects/84082932/#editor">this link</a> to see a prisoner's dilemma simulator
+<li>Sometimes, you'll want to move a file (or some files) rather than copy them. 
 </li>
-<li>If you've a Scratch account, you can sign in to save the work you'll do here.
+<li>If you're not already theren navigate into the <code>otherDir</code> directory.
 </li>
-<li>If you've not got one, you can always click 'File -&gt; Download to your computer' when you're finished to ensure your work is saved.
+<li>Type <code>mv anotherOne.txt ../secretDir/</code> 
 </li>
-<li>Unfortunately, it looks like the developer didn't have time to finish the code, and there are some blanks. 
+<li>If you do <code>ls</code>, you'll see that your file is now gone. Where did it go? What do you think the <code>..</code> did in the destination file path (<code>../secretDir/</code>) that you wrote?
 </li>
-<li>Based on the rules set out above, can you complete the code and make the game work?
+<li>You can rename files by moving them too. You could do <code>mv kittenpic.jpg dogpic.jpg</code> for instance, which would rename <code>kittenpic.jpg</code> to <code>dogpic.jpg</code>.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3 badge">
-<h3 id="sec-1-5">Badge It</h3>
+
+<div id="outline-container-sec-1-5" class="outline-3 code">
+<h3 id="sec-1-5">Remove It</h3>
 <div class="outline-text-3" id="text-1-5">
-</div>
-<div id="outline-container-sec-1-5-1" class="outline-4">
-<h4 id="sec-1-5-1">Silver</h4>
-<div class="outline-text-4" id="text-1-5-1">
 <ul class="org-ul">
-<li>Complete the code for the game.
+<li>If you can copy and move files, the last thing to do is be able to delete the ones you don't want.
+</li>
+<li>Navigate into the <code>secretDir</code> directory.
+</li>
+<li>Type <code>rm anotherOne.txt</code> and hit enter.
+</li>
+<li>If you now do <code>ls</code>, you'll see that your file is gone. Linux tends to work on the assumption you know what you're doing, so won't ask if you're sure when you try and delete a file. 
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-5-2" class="outline-4">
-<h4 id="sec-1-5-2">Gold</h4>
-<div class="outline-text-4" id="text-1-5-2">
+
+<div id="outline-container-sec-1-6" class="outline-3 code">
+<h3 id="sec-1-6">Going Wild</h3>
+<div class="outline-text-3" id="text-1-6">
 <ul class="org-ul">
-<li>Modify the cat's strategy to be an 'angel'. It always stays silent, and never betrays the human player. 
+<li>If we need to, we can delete (or move or copy) lots of things at once by using wildcards.
 </li>
-<li>Develop a new 'Unpredictable puss' strategy for the cat, so that it betrays or stays silent at random. 
+<li>Let's try. Type: <code>cd moreDocs</code> and <code>ls</code> the contents.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/4_2.png" alt="4_2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>We're going to delete the <code>a_hamster.txt</code> and <code>a_horse.txt</code> files. They both start with <code>a_h</code>.
+</li>
+<li>Type: <code>rm a_h* and then do another =ls -l</code>
+</li>
+<li>That last command told the OS to remove all files in the current directory that start with <code>a_h</code> and then have any number of characters after it in the filename.
+</li>
+<li>This only describes the hamster and horse files, which is why they're the only ones to be removed.
+</li>
+<li><b>Task:</b> Delete the <code>a_antagonistic.txt</code> and <code>a_antarctica.txt</code>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>You can sandwich wildcards in the middle of commands too. Consider: <code>cp a_b*r* ../</code>
+</li>
+<li>This copies all the files in the current directory that&#x2026;
+<ul class="org-ul">
+<li>Start with <code>a_b</code> then&#x2026;
+</li>
+<li>has any number of letters and numbers after it, followed by&#x2026;
+</li>
+<li>a single letter <code>r</code> and finally&#x2026;
+</li>
+<li>any number of letters/numbers
+</li>
+<li>and copies these files to the directory below the current one. 
+</li>
+</ul>
+</li>
+<li>Clever, eh?
+</li>
+<li><b>Task:</b> Delete all the files that have a letter <code>a</code> in the <code>moreDocs</code> directory.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-5-3" class="outline-4">
-<h4 id="sec-1-5-3">Platinum</h4>
-<div class="outline-text-4" id="text-1-5-3">
+
+<div id="outline-container-sec-1-7" class="outline-3 code">
+<h3 id="sec-1-7">Touchy Subject</h3>
+<div class="outline-text-3" id="text-1-7">
 <ul class="org-ul">
-<li>Modify the cat's strategy so that it holds a grudge&#x2026;
+<li>Sometimes, you'll need to make new empty files ready to put things into.
 </li>
-<li>It will remain silent every time the game is played, until the human player betrays, then&#x2026;
+<li>To do this, simply use the <code>touch</code> command, like this.
+<ul class="org-ul">
+<li><code>touch newFile.txt</code>
 </li>
-<li>It will then always betray the human player until the game is reset.
+<li><code>touch ~/home/topsecretfile.txt</code>
+</li>
+</ul>
+</li>
+<li>You can make new directories with <code>mkdir</code>
+<ul class="org-ul">
+<li><code>mkdir cheatMode</code>
+</li>
+<li><code>mkdir otherDir/1D_posters</code>
+</li>
+</ul>
 </li>
 </ul>
 </div>
+</div>
+
+<div id="outline-container-sec-1-8" class="outline-3 badge">
+<h3 id="sec-1-8">Badge It</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Browse into the <code>moveIt/otherDir/badge</code> directory and attempt the following&#x2026;
+</li>
+<li><b>Silver:</b> Complete the following&#x2026;
+<ul class="org-ul">
+<li>Make three new files called <code>badge1</code>, <code>badge2</code> and <code>myThirdBadge</code>.
+</li>
+<li>Make a directory called <code>myBadgeDir</code>.
+</li>
+<li>Move all three files into the new folder.
+</li>
+<li>Navigate into that directory, do a <code>ls</code>, screenshot the Terminal window and upload the image.
+</li>
+</ul>
+</li>
+
+<li><b>Gold:</b> Write commands which would do the following&#x2026;
+<ul class="org-ul">
+<li>Move all the <code>.txt</code> files in the current the <code>moveIt/otherDir/badge</code> directory to the <code>newDir</code> directory.
+</li>
+<li>Remove all the <code>.jpg</code> files in the current directory.
+</li>
+<li>Move into the <code>newDir</code> directory, and remove all the files that start <code>a_a</code>
+</li>
+<li>Rename the <code>a_beatle.txt</code> file to <code>BEETLE.txt</code>
+</li>
+</ul>
+</li>
+<li><b>Platinum:</b> When you type commands, you can run them through other commands to help when there are thousands (or billions if you work at Facebook) of files to work with. One of them is <code>grep</code>. Investigate and show how to list the contents of a directory, showing only files that contain <code>nt</code>. Put the command in a file called <code>platanswer.txt</code> and write the answer in the file and upload it for marking.
+</li>
+</ul>
 </div>
 </div>
 </div>
