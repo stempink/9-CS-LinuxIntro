@@ -132,7 +132,7 @@
 | =rm=    | =rm filename.txt=         | Removes (deletes) a file       |
 
 - Once you can do all the things we've done in this unit, you're in pretty good shape to do useful work on a computer.
-- We'll have a quick go at using some files, then you'll do some work by yourself to collect the badge. We'll use the files we picked up from the web in lesson 2.
+- We'll have a quick go at manipulating some files, then you'll do some work by yourself to collect the badge. We'll use the files we picked up from the web in lesson 2.
 - Type (or copy and paste) this line:
 #+begin_src
 cd ~/Documents/Linux_Work/9-CS-LinuxIntro-files/moveIt
@@ -184,7 +184,7 @@ git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
 :HTML_CONTAINER_CLASS: code
 :END:
 - If we need to, we can delete (or move or copy) lots of things at once by using wildcards.
-- Let's try. Type: =cd moreDocs= and =ls= the contents.
+- Let's try. Type: =cd= into the =moreDocs= directory and =ls= the contents.
 [[./img/4_2.png]]
 - We're going to delete the =a_hamster.txt= and =a_horse.txt= files. They both start with =a_h=.
 - Type: =rm a_h* and then do another =ls -l=
@@ -220,15 +220,20 @@ git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Browse into the =moveIt/otherDir/badge= directory and attempt the following...
+
+
 - *Silver:* Complete the following...
    - Make three new files called =badge1=, =badge2= and =myThirdBadge=.
    - Make a directory called =myBadgeDir=.
    - Move all three files into the new folder.
    - Navigate into that directory, do a =ls=, screenshot the Terminal window and upload the image.
 
+
 - *Gold:* Write commands which would do the following...
    - Move all the =.txt= files in the current the =moveIt/otherDir/badge= directory to the =newDir= directory.
    - Remove all the =.jpg= files in the current directory.
    - Move into the =newDir= directory, and remove all the files that start =a_a=
    - Rename the =a_beatle.txt= file to =BEETLE.txt=
+
+
 - *Platinum:* When you type commands, you can run them through other commands to help when there are thousands (or billions if you work at Facebook) of files to work with. One of them is =grep=. Investigate and show how to list the contents of a directory, showing only files that contain =nt=. Put the command in a file called =platanswer.txt= and write the answer in the file and upload it for marking.
