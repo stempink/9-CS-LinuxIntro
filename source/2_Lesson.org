@@ -96,7 +96,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- To get the most out of Linux, you'll want to learn to use the command line to get things done. Linux is based around an operating system called UNIX that was first devised and written in 1969. Computers weren't really used with mice, touch screens or graphics back then. Many used printers to produce their output rather than a monitor. 
+- To get the most out of Linux, you'll want to learn to use the command line to get things done. Linux is based around an operating system called [[https://en.wikipedia.org/wiki/Unix][UNIX]] that was first devised and written in 1969. Computers weren't really used with mice, touch screens or graphics back then. Many used [[https://en.wikipedia.org/wiki/Line_printer][line printers]] to produce their output rather than a monitor. 
 - Many of the commands you'll learn are unchanged since the original UNIX release. Depite these commands possibly being older than your parents, they are used daily on the vast majority of the World's most powerful computers. 
 - In this lesson, we'll learn to navigate around your files and look at what's in them. 
 - Open the Linux VM using the link on your desktop, and log in using your network username and password. 
@@ -152,7 +152,7 @@ cd NAME_OF_DIRECTORY
 - There are three text files in here. We'll have a look inside them in a moment.
 - For now though, we'll need to get back to the previous directory. This is done as follows:
 - =cd ..=
-- In Linux type Operating Systems, =..= means 'back one level'. You can use a few of them at a time to navigate around more quickly. E.g. =cd ../..= to drop back two directory levels, or =cd =../b= to drop back a level, then change into the =b= directory if you were already working inside =a=.
+- In Linux type Operating Systems, =..= means 'back one level'. You can use a few of them at a time to navigate around more quickly. E.g. =cd ../..= to drop back two directory levels, or =cd ../b= to drop back a level, then change into the =b= directory if you were already working inside =a=.
 - *Task:* Use =pwd= to get your bearings, then navigate into the =a= directory once more. 
 
 #+begin_src
@@ -169,5 +169,5 @@ cat FILENAME
 :HTML_CONTAINER_CLASS: badge
 :END:
 - *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. Copy and paste the passcode into a text file and upload it to collect this badge.
-- *Gold:* Under the passcode, add a short explanation of what =ls=, =cd= and =pwd= do in a Linux terminal. 
+- *Gold:* Under the passcode, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
 - *Platinum:* Make a new directory called 'LinuxChamp' inside the =a= directory, and move one of the joke files from the =a= directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.

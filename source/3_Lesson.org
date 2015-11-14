@@ -5,13 +5,13 @@
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
-#+TITLE: The Prisoner's Dilemma
+#+TITLE: emacs
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/stsb11/9-CS-gameTheory">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/9-CS-LinuxIntro">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -95,42 +95,60 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Game theory is the study of how and why people make decisions.
-- It is used extensively in the study of economics, and can often show surprising insights into how people behave. 
-- We'll look at some of these in this unit, and code some different games along the way in both Scratch and Python. 
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- The Prisoner's Dilemma is probably the most popular example of game theory in action. It demonstrates that people don't always act in their own best interests. 
-
-#+BEGIN_HTML
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t9Lo2fgxWHw" frameborder="0" allowfullscreen></iframe>
-#+END_HTML
-
-- Imagine that two people have been arrested for a crime, and the police are uncertain which person committed the crime and which person helped carry it out. 
-- Each prisoner is put into a different room and given a choice: 
-     - Remain silent
-     - Betray your parter
-- If both stay silent, they will both be sent to prison for *1 year*.
-- If they both betray one another, they can both be sent away for *3 years*.
-- If one betrays the other, the betrayer goes *free*, and the other is imprisoned for *5 years*.
-
-- The lowest total amount of prison time somes from both parties cooperating, /but/ there's always the risk that the other person might not be as kind of you. 
-- This becomes more interesting if we play the game once, then immediately play it again. Each player will now have a knowledge of how the other person behaved last time, and this will influence their decision making process. 
-- If we assign points (based on minimizing time in jail), we can develop different game strategies to minimize the time the human player stays in jail over multiple games. 
+- When on a computer system, users will need to be able to edit files. 
+- Most files contain plain text with no images of video embedded in them (e.g. HTML files, .txt files, .py files). These can be modified by programs called text editors.
+- There are various text editors available on Linux systems, and hackers typically have [[https://stallman.org/saint.html][strong feelings]] about their favourite. 
+- Some examples are:
+   - Nano
+   - vim
+   - emacs (always with a lower case e)
+   - gedit
+- The Internet community is [[https://en.wikipedia.org/wiki/Editor_war][divided]] as to whether emacs or vim is better.
+- You can make your own mind up on this. We use emacs to author everything you see on [[https://www.bournetocode.com][BourneToCode.com]] and [[https://www.bournetoinvent.com][BourneToInvent.com]] though. 
+- Although originally written for UNIX-like systems, most of the above editors are also availale for other operating systems, like Windows. 
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- The same idea can be seen in different places in human society. 
-- Imagine a pair of competing fizzy drinks manufacturers. They both have two options when considering the sales of their products:
-    - *Option 1:* Don't spend money on advertising. People know your product already, and are currently buying it at a steady rate. 
-    - *Option 2:* Spend money on advertising. It'll cost money, but sales will increase.
-- If both companies cooperate (option 1), they'll both enjoy steady profits and won't have to spend thousands of pounds on advertising.
-- If one advertises and the other doesn't, one company will see their sales increase as the other company's sales (and profits) drop. 
-- If both companies advertise, the effects of them both advertising will cancel each other out, and both companies will see their overall profits drop because of the money they're spending on advertising. 
-- In real life, competing companies tend to advertise aggressively. 
+- Emacs was written back in 1976 by a software engineer called Richard Stallman. He's quite the character in his own right; you can read more about him on his [[https://en.wikipedia.org/wiki/Richard_Stallman][Wikipedia page]]. 
+[[https://upload.wikimedia.org/wikipedia/commons/e/ef/Emacs_Dired_buffers.png]]
+- Despite being nearly 40 years old, emacs continues to be actively developed by the online community, and is one of the oldest computer applications in the World still in active use.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- emacs was written for an era in computer science where the keyboard was the only way to enter commands onto a computer and graphics consisted of text appearing on a text-only terminal. 
+- While superficially, it might seem daunting to enter text without a mouse, but many professional developers find that when one works without ever having to take their hands off the keyboard, they are able to work far more quickly. 
+[[./img/3_1.png]]
+- Load up emacs either by loading it from the applications menu or by typing =emacs= in the terminal. They both work the same way, but the version you load with the mouse will also allow you to use the mouse to navigate around documents. The screen will look like the image above.
+
+
+- We'll create a quick web page to get to grips with working on a file.
+- emacs uses (about 2000) keyboard shortcuts to allow users to achieve all manner of activities. We'll only need a tiny number of these to get some productive work done. 
+- In emacs, shortcuts are either achieved by holding the Control key and pressing another key, or holding the meta key (Alt) and tapping another key. 
+- The shorthand for this looks like this: C-x C-f.
+- This would mean to Hold Control and tap =x=, then to hold Control and tap =f=. You don't need to release the control key each time, but you can if you want to.
+- Type =C-x, C-f= which is the combination to open a new file.
+[[./img/3_2.png]]
+- At the bottom of the screen, the computer will show you the =~/= prompt, which is inviting you to enter the name of the file you'd like to open or create. 
+- Type =newfile.html= and hit enter to make a new, empty HTML file.
+- Paste this into the new, empty document...
+
+#+begin_src
+<html>
+<head><title>
+I'm a l33t Ha><0r
+</title>
+
+<body>
+Computer Science ftw!
+</body>
+
+</html>
+#+end_src
+
+- Save the work with =C-x, C-s=.
+- 
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
