@@ -1,0 +1,30 @@
+  684  history | sort -r | head >> hist.txt && history | sort -r | tail -n20 >> hist.txt
+  683  rm hist.txt 
+  682  history
+  681  cat hist.txt 
+  680  history | sort | tail -n20 >> hist.txt
+  679  history | sort | head > hist.txt
+  678  man vi
+  677  man head
+  676  rm disk.txt 
+  675  cat disk.txt 
+  204  ls
+  203  pandoc
+  202  brew install wine
+  201  brew install winetricks
+  200  brew upgrade
+  199  brew update
+  198  sudo xcodebuild -license
+  197  brew update
+  196  exit
+  195  cd source/
+  194  ls
+  193  cd 9-SC-LED/
+  192  ls
+  191  lks
+  190  l
+  189  cd projects/
+  188  gup
+  187  cd 9-CS-gameTheory/
+  186  cd projects/
+  185  exit

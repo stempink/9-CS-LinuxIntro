@@ -127,7 +127,7 @@ echo "This is a little bit more text." >> whatsit.txt
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- On a Linux machine, you can type =history= to see (up to) the last 500 commands you've entered. Try it now.
+- You can type =history= to see (up to) the last 500 commands you've entered. Try it.
 - It'd be nice to keep this to have a record of what you've done in the past. I've been using Linux for a while, and still look over my own history from time to time; it's handy to refer back to.
 - *Task:* Redirect the contents of the history command into a file called =recentHistory.txt=
 ** Learn It
@@ -137,7 +137,9 @@ echo "This is a little bit more text." >> whatsit.txt
 - Your =recentHistory.txt= file probably has quite a lot in it.
 - In Linux, files can get very big, very fast.
 - To see the first 10 lines in any file, use the =head= program, like this:
-   - =head recentHistory.txt=
+#+begin_src
+head recentHistory.txt
+#+end_src
 - What do you suppose the =tail= program does when you give it a file?
 - *Task:* Find out what =tail= does.
 
@@ -145,28 +147,47 @@ echo "This is a little bit more text." >> whatsit.txt
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+[[./img/pipe.jpg]]
 - To be a proper Linux pro, you'll want to start using pipes.
 - The basic idea is that you run a program, then pass the results to another program (and maybe another and another...)
 - Being able to do this makes Linux incredibly powerful, especially if you're quite creative.
 - Let's try an example: You're running out of space on your computer, and you want to know which files are taking up the most room so you can delete them.
 - The =du= command tells you how much disk space every file and sub-directory is using from wherever you are on the computer.
-- If you're in =/= (the root) when you start, you'll see the details for EVERY file on the computer.
-- Give it a go, and use Ctrl-c to kill the program when you get bored.
-- By itself, this gives an overwhelming amount of information, presented in ascending (smallest to largest) order.
+- If you're in =/= (the root) when you start, you'll see the details for *EVERY* file on the computer. This might take a while to run, though... 
+- Change into a directory with a few files in it (like your 'My Documents' directory, and give it a go. You can always hit Ctrl-c to kill the program if it takes too long.
+- By itself, this command gives an overwhelming amount of information, presented in ascending (smallest to largest) order.
+- The pipe symbol ( =|= ) takes the output from one program, and sends it into another. You can chain lots of these together to achieve sophisticated results.
 
 
-- The =sort= command takes any file and sorts it into either asecending or descending order. By putting -nr on the end of the command, we ask the =sort= program to use numeric values (=n=) and reverse (=r=) the sort order. 
+- The =sort= command takes any file and sorts it into either asecending or descending order. By putting =-nr= on the end of the command, we ask the =sort= program to use numeric values (=n=) and reverse (=r=) the sort order. 
 - In our quest to find the largest files on the system, at least they'll appear in the right order now, although there are likely to be millions of files.
-- Try it: =du | sort -nr=
-- This time, there will be a bit of a delay while the computer browses the files availble and sorts them, then your files will be output. 
+- Try it: 
+#+begin_src
+cd /
+du | sort -nr
+#+end_src
+- This time, there will be a bit of a delay while the computer browses the files availble and sorts them, then your enormous list of files will be output. 
+- Finally, we can take this output and just ask to see the first 10 results by piping the output through =head=...
+#+begin_src
+du | sort -nr | head
+#+end_src
+- These filesizes are all in bytes. If we add a =-h= after the =du= command, it'll be presented in a human-readable format (i.e. showing files in kilbytes, megabytes and so on). 
+- Many Linux command-line programs can be given parameters like this to modify how they work. 
+- Linux has a built in manual that you can use to find out more about any command you're using. Type =man more= for instance, to see more information avout the =more= command. 
+- When browsing =man= pages, use the space bar to move forward a whole page, or the up/down arrows to move one line at a time. Tap =q= to quit.
 
-
-- Finally, we can take this output and just ask to see the first 10 results by piping the output through =head=.
-- Our command is now: =du | sort -nr | head=
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* 
-- *Gold:* 
-- *Platinum:* 
+- *Silver:* Redirect the contents of your 'My documents' directory into a text file. Open the file in a text editor, and put the command you used at the top of the file. Save it, and upload it. 
+
+
+- *Gold:* The =ps aux= command shows a list of every program running on your Linux machine. Redirect the last 10 items from the output from this command into a text file and put the command you used at the top of the file. Save it, and upload it. 
+
+
+- *Platinum:* Produce a file called =alphaBash.txt=. 
+   - Put your command history in it...
+   - In reverse order...
+   - Showing only the first 10 and last *20* commands entered.
+   - Extra credit if you can do it all in a single command!

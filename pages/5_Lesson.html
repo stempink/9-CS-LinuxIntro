@@ -136,7 +136,7 @@ echo "This is a little bit more text." &gt;&gt; whatsit.txt
 <h3 id="sec-1-3">Try It</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li>On a Linux machine, you can type <code>history</code> to see (up to) the last 500 commands you've entered. Try it now.
+<li>You can type <code>history</code> to see (up to) the last 500 commands you've entered. Try it.
 </li>
 <li>It'd be nice to keep this to have a record of what you've done in the past. I've been using Linux for a while, and still look over my own history from time to time; it's handy to refer back to.
 </li>
@@ -154,11 +154,12 @@ echo "This is a little bit more text." &gt;&gt; whatsit.txt
 <li>In Linux, files can get very big, very fast.
 </li>
 <li>To see the first 10 lines in any file, use the <code>head</code> program, like this:
-<ul class="org-ul">
-<li><code>head recentHistory.txt</code>
 </li>
 </ul>
-</li>
+<pre class="example">
+head recentHistory.txt
+</pre>
+<ul class="org-ul">
 <li>What do you suppose the <code>tail</code> program does when you give it a file?
 </li>
 <li><b>Task:</b> Find out what <code>tail</code> does.
@@ -170,6 +171,11 @@ echo "This is a little bit more text." &gt;&gt; whatsit.txt
 <div id="outline-container-sec-1-5" class="outline-3 code">
 <h3 id="sec-1-5">Pipe It</h3>
 <div class="outline-text-3" id="text-1-5">
+
+<div class="figure">
+<p><img src="./img/pipe.jpg" alt="pipe.jpg" />
+</p>
+</div>
 <ul class="org-ul">
 <li>To be a proper Linux pro, you'll want to start using pipes.
 </li>
@@ -181,44 +187,78 @@ echo "This is a little bit more text." &gt;&gt; whatsit.txt
 </li>
 <li>The <code>du</code> command tells you how much disk space every file and sub-directory is using from wherever you are on the computer.
 </li>
-<li>If you're in <code>/</code> (the root) when you start, you'll see the details for EVERY file on the computer.
+<li>If you're in <code>/</code> (the root) when you start, you'll see the details for <b>EVERY</b> file on the computer. This might take a while to run, though&#x2026; 
 </li>
-<li>Give it a go, and use Ctrl-c to kill the program when you get bored.
+<li>Change into a directory with a few files in it (like your 'My Documents' directory, and give it a go. You can always hit Ctrl-c to kill the program if it takes too long.
 </li>
-<li>By itself, this gives an overwhelming amount of information, presented in ascending (smallest to largest) order.
+<li>By itself, this command gives an overwhelming amount of information, presented in ascending (smallest to largest) order.
+</li>
+<li>The pipe symbol ( <code>|</code> ) takes the output from one program, and sends it into another. You can chain lots of these together to achieve sophisticated results.
 </li>
 </ul>
 
 
 <ul class="org-ul">
-<li>The <code>sort</code> command takes any file and sorts it into either asecending or descending order. By putting -nr on the end of the command, we ask the <code>sort</code> program to use numeric values (<code>n</code>) and reverse (<code>r</code>) the sort order. 
+<li>The <code>sort</code> command takes any file and sorts it into either asecending or descending order. By putting <code>-nr</code> on the end of the command, we ask the <code>sort</code> program to use numeric values (<code>n</code>) and reverse (<code>r</code>) the sort order. 
 </li>
 <li>In our quest to find the largest files on the system, at least they'll appear in the right order now, although there are likely to be millions of files.
 </li>
-<li>Try it: <code>du | sort -nr</code>
-</li>
-<li>This time, there will be a bit of a delay while the computer browses the files availble and sorts them, then your files will be output. 
+<li>Try it: 
 </li>
 </ul>
-
-
+<pre class="example">
+cd /
+du | sort -nr
+</pre>
 <ul class="org-ul">
-<li>Finally, we can take this output and just ask to see the first 10 results by piping the output through <code>head</code>.
+<li>This time, there will be a bit of a delay while the computer browses the files availble and sorts them, then your enormous list of files will be output. 
 </li>
-<li>Our command is now: <code>du | sort -nr | head</code>
+<li>Finally, we can take this output and just ask to see the first 10 results by piping the output through <code>head</code>&#x2026;
+</li>
+</ul>
+<pre class="example">
+du | sort -nr | head
+</pre>
+<ul class="org-ul">
+<li>These filesizes are all in bytes. If we add a <code>-h</code> after the <code>du</code> command, it'll be presented in a human-readable format (i.e. showing files in kilbytes, megabytes and so on). 
+</li>
+<li>Many Linux command-line programs can be given parameters like this to modify how they work. 
+</li>
+<li>Linux has a built in manual that you can use to find out more about any command you're using. Type <code>man more</code> for instance, to see more information avout the <code>more</code> command. 
+</li>
+<li>When browsing <code>man</code> pages, use the space bar to move forward a whole page, or the up/down arrows to move one line at a time. Tap <code>q</code> to quit.
 </li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-sec-1-6" class="outline-3 badge">
 <h3 id="sec-1-6">Badge It</h3>
 <div class="outline-text-3" id="text-1-6">
 <ul class="org-ul">
-<li><b>Silver:</b> 
+<li><b>Silver:</b> Redirect the contents of your 'My documents' directory into a text file. Open the file in a text editor, and put the command you used at the top of the file. Save it, and upload it. 
 </li>
-<li><b>Gold:</b> 
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Gold:</b> The <code>ps aux</code> command shows a list of every program running on your Linux machine. Redirect the last 10 items from the output from this command into a text file and put the command you used at the top of the file. Save it, and upload it. 
 </li>
-<li><b>Platinum:</b> 
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Platinum:</b> Produce a file called <code>alphaBash.txt</code>. 
+<ul class="org-ul">
+<li>Put your command history in it&#x2026;
+</li>
+<li>In reverse order&#x2026;
+</li>
+<li>Showing only the first 10 and last <b>20</b> commands entered.
+</li>
+<li>Extra credit if you can do it all in a single command!
+</li>
+</ul>
 </li>
 </ul>
 </div>
