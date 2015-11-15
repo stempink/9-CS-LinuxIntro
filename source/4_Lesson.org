@@ -190,7 +190,7 @@ twistd -n web -p 80 --path .
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- The emac community also include several games within emacs.
+- The emacs community also include several games within emacs.
 - Try typing some of the following. 
 - /Note:/ You can type =q= to exit them.
    - =M-x tetris=
