@@ -3,6 +3,7 @@
 #+HTML_HEAD_EXTRA: <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+HTML_HEAD_EXTRA: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="css/term.css"/>
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Introduction to Linux
@@ -100,6 +101,14 @@
 - Many of the commands you'll learn are unchanged since the original UNIX release. Depite these commands possibly being older than your parents, they are used daily on the vast majority of the World's most powerful computers. 
 - In this lesson, we'll learn to navigate around your files and look at what's in them. 
 - Open the Linux VM using the link on your desktop, and log in using your network username and password. 
+- Alternatively, you can use this emulator...
+#+BEGIN_HTML
+<iframe src="./js/jslinux/index.html" height=600px width=700px frameborder=0></iframe>
+#+END_HTML
+- Or...
+#+BEGIN_HTML
+<a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
+#+END_HTML
 - Once in, open a Terminal session. You'll have a window open that looks a little like this...
 [[./img/term.png]]
 - We'll start by moving into a new directory (or folder as you might say in Windows), downloading some files from the web and then navigating through them.
@@ -118,6 +127,9 @@ cd 9-CS-LinuxIntro-files/treasure
    - Change Directory into /LinuxWork/.
    - Download some files from a website called 'GitHub.com'
    - Change Directory into the directory containing these files we just downloaded.
+
+- *NOTE TO SELF:* Embedded terminal could do with these:
+- wget http://raw.githubusercontent.com/stsb11/9-CS-LinuxIntro-files/master/thefiles.zip
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research

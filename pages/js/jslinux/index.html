@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Javascript PC Emulator</title>
+<title>Javascript Linux Emulator</title>
 <style>
 .term {
     font-family: courier,fixed,swiss,monospace,sans-serif;
@@ -26,14 +26,18 @@
 </style>
 </head>
 <body onload="start()">
-<table border="0">
+<table border="0" width=600px border=0>
 <tr valign="top"><td>
 <script type="text/javascript" src="utils.js"></script>
 <script type="text/javascript" src="term.js"></script>
 <script type="text/javascript" src="cpux86-ta.js"></script>
 <script type="text/javascript" src="jslinux.js"></script>
-<div id="copyright">&copy; 2011-2015 Fabrice Bellard - <a href="news.html">News</a> - <a href="faq.html">FAQ</a> - <a href="tech.html">Technical notes</a></div>
-<td><input type="button" value="Clear clipboard" onclick="clear_clipboard();"><br><textarea row="4" cols="16" id="text_clipboard"></textarea>
+<div id="Copyright"><font face=arial>&copy; 2011-2015 <a href='http://www.bellard.org'>Fabrice Bellard</a></font></div></td></tr>
+<tr>
+  <td><textarea row="4" cols="50" id="text_clipboard"></textarea>
+  <br><input type="button" value="Clear Clipboard" onclick="clear_clipboard();">
+  </td>
+</tr>
 </table>
 </body>
 </html>
