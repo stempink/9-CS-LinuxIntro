@@ -101,7 +101,7 @@
 - Many of the commands you'll learn are unchanged since the original UNIX release. Depite these commands possibly being older than your parents, they are used daily on the vast majority of the World's most powerful computers. 
 - In this lesson, we'll learn to navigate around your files and look at what's in them. 
 - Open the Linux VM using the link on your desktop, and log in using your network username and password. 
-- Alternatively, you can use this superb emulator by [[http://www.bellard.org][Fabrice Bellard]]...
+- Alternatively, you can use this excellent emulator, written by a chap called [[http://www.bellard.org][Fabrice Bellard]]...
 #+BEGIN_HTML
 <iframe src="./js/jslinux/index.html" height=600px width=700px frameborder=0></iframe>
 #+END_HTML
