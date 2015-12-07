@@ -89,19 +89,27 @@ for the JavaScript code in this tag.
 </li>
 <li>In this lesson, we'll learn to navigate around your files and look at what's in them. 
 </li>
-<li>Open the Linux VM using the link on your desktop, and log in using your network username and password. 
-</li>
-<li>Alternatively, you can use this superb emulator by <a href="http://www.bellard.org">Fabrice Bellard</a>&#x2026;
+<li>To get started, you can use this superb emulator by <a href="http://www.bellard.org">Fabrice Bellard</a>&#x2026;
 </li>
 </ul>
-<iframe src="./js/jslinux/index.html" height=600px width=700px frameborder=0></iframe>
+<iframe src="./js/jslinux/index.html" height=700px width=700px frameborder=0></iframe>
 <ul class="org-ul">
 <li>Or&#x2026;
 </li>
 </ul>
 <a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
 <ul class="org-ul">
-<li>Once in, open a Terminal session. You'll have a window open that looks a little like this&#x2026;
+<li>Once the session has booted up, type <code>cd /home/treasure_hunt</code> and scroll down to the <b>try it</b> section further down the page.
+</li>
+<li>Alternatively, open the Linux VM using the link on your desktop, and log in using your network username and password. 
+</li>
+<li>If you're going to work in a VM, then&#x2026;
+<ul class="org-ul">
+<li><b>NOTE: DON'T DO THESE STEPS IF YOU'RE USING THE BROWSER VERSION OF LINUX</b>
+</li>
+<li>Open a Terminal session. You'll have a window open that looks a little like this&#x2026;
+</li>
+</ul>
 </li>
 </ul>
 
@@ -138,11 +146,6 @@ cd 9-CS-LinuxIntro-files/treasure
 </li>
 </ul>
 </li>
-
-<li><b>NOTE TO SELF:</b> Embedded terminal could do with these:
-</li>
-<li>wget <a href="http://raw.githubusercontent.com/stsb11/9-CS-LinuxIntro-files/master/thefiles.zip">http://raw.githubusercontent.com/stsb11/9-CS-LinuxIntro-files/master/thefiles.zip</a>
-</li>
 </ul>
 </div>
 </div>
@@ -172,8 +175,6 @@ pwd
 </ul>
 </li>
 </ul>
-
-
 <pre class="example">
 cd NAME_OF_DIRECTORY
 </pre>
@@ -197,10 +198,6 @@ cd NAME_OF_DIRECTORY
 </li>
 <li>The username and group of the person who created the file is shown here too.
 </li>
-</ul>
-
-
-<ul class="org-ul">
 <li>At the moment, you should be able to see four directories, imaginatively called <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code>. Let's Change Directory into a&#x2026;
 </li>
 <li>Type: <code>cd a</code>
@@ -251,7 +248,7 @@ cat FILENAME
 </li>
 <li><b>Gold:</b> Under the passcode, add a short explanation of what <code>ls</code>, <code>cd</code>, <code>cat</code> and <code>pwd</code> do in a Linux terminal. 
 </li>
-<li><b>Platinum:</b> Make a new directory called 'LinuxChamp' inside the <code>a</code> directory, and move one of the joke files from the <code>a</code> directory into it. Screenshot the results of the <code>pwd</code> and <code>ls</code> command from the terminal as evidence you've completed the task.
+<li><b>Platinum:</b> Make a new directory called <code>LinuxChamp</code> inside the <code>/var/root/</code> directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the <code>pwd</code> and <code>ls</code> command from the terminal as evidence you've completed the task.
 </li>
 </ul>
 </div>
@@ -259,7 +256,7 @@ cat FILENAME
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
