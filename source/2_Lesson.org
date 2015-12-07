@@ -100,19 +100,22 @@
 - To get the most out of Linux, you'll want to learn to use the command line to get things done. Linux is based around an operating system called [[https://en.wikipedia.org/wiki/Unix][UNIX]] that was first devised and written in 1969. Computers weren't really used with mice, touch screens or graphics back then. Many used [[https://en.wikipedia.org/wiki/Line_printer][line printers]] to produce their output rather than a monitor. 
 - Many of the commands you'll learn are unchanged since the original UNIX release. Depite these commands possibly being older than your parents, they are used daily on the vast majority of the World's most powerful computers. 
 - In this lesson, we'll learn to navigate around your files and look at what's in them. 
-- Open the Linux VM using the link on your desktop, and log in using your network username and password. 
-- Alternatively, you can use this superb emulator by [[http://www.bellard.org][Fabrice Bellard]]...
+- To get started, you can use this superb emulator by [[http://www.bellard.org][Fabrice Bellard]]...
 #+BEGIN_HTML
-<iframe src="./js/jslinux/index.html" height=600px width=700px frameborder=0></iframe>
+<iframe src="./js/jslinux/index.html" height=700px width=700px frameborder=0></iframe>
 #+END_HTML
 - Or...
 #+BEGIN_HTML
 <a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
 #+END_HTML
-- Once in, open a Terminal session. You'll have a window open that looks a little like this...
+- Once the session has booted up, type =cd /home/treasure_hunt= and scroll down to the *try it* section further down the page.
+- Alternatively, open the Linux VM using the link on your desktop, and log in using your network username and password. 
+- If you're going to work in a VM, then...
+   -  *NOTE: DON'T DO THESE STEPS IF YOU'RE USING THE BROWSER VERSION OF LINUX*
+   - Open a Terminal session. You'll have a window open that looks a little like this...
 [[./img/term.png]]
-- We'll start by moving into a new directory (or folder as you might say in Windows), downloading some files from the web and then navigating through them.
-- One by one, copy and paste these lines into your terminal...
+   - We'll start by moving into a new directory (or folder as you might say in Windows), downloading some files from the web and then navigating through them.
+   - One by one, copy and paste these lines into your terminal...
 #+begin_src
 cd ~/Documents
 mkdir Linux_Work
@@ -127,9 +130,6 @@ cd 9-CS-LinuxIntro-files/treasure
    - Change Directory into /LinuxWork/.
    - Download some files from a website called 'GitHub.com'
    - Change Directory into the directory containing these files we just downloaded.
-
-- *NOTE TO SELF:* Embedded terminal could do with these:
-- wget http://raw.githubusercontent.com/stsb11/9-CS-LinuxIntro-files/master/thefiles.zip
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
@@ -144,8 +144,6 @@ pwd
 - Present Working Directory. Outputs the current directory you're in.
 - If you've followed the above instructions and try this, you should see that you're currently working in...
    - =<SOMETHING>/9-CS-LinuxIntro-files/treasure_hunt=
-
-
 #+begin_src
 cd NAME_OF_DIRECTORY
 #+end_src
@@ -156,8 +154,6 @@ cd NAME_OF_DIRECTORY
 - Entries which are directories (like *pages* and *source*) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
 - The size of the file in bytes is shown to the left of the month the file was last modified.
 - The username and group of the person who created the file is shown here too.
-
-
 - At the moment, you should be able to see four directories, imaginatively called =a=, =b=, =c= and =d=. Let's Change Directory into a...
 - Type: =cd a=
 - Now let's LiSt the files in this directory. Type: =ls=
@@ -182,4 +178,4 @@ cat FILENAME
 :END:
 - *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. Copy and paste the passcode into a text file and upload it to collect this badge.
 - *Gold:* Under the passcode, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
-- *Platinum:* Make a new directory called 'LinuxChamp' inside the =a= directory, and move one of the joke files from the =a= directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
+- *Platinum:* Make a new directory called =LinuxChamp= inside the =/var/root/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
