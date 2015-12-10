@@ -21,6 +21,7 @@
       <li><a href="2_Lesson.html">Week2</a></li>
       <li><a href="3_Lesson.html">Week3</a></li>
       <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
       <li><a href="assessment.html">Assessment</a></li>
     </ul>
   </div>
@@ -176,6 +177,6 @@ cat FILENAME
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. Copy and paste the passcode into a text file and upload it to collect this badge.
-- *Gold:* Under the passcode, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
+- *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
+- *Gold:* In the file you created for the silver badge, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
 - *Platinum:* Make a new directory called =LinuxChamp= inside the =/var/root/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
