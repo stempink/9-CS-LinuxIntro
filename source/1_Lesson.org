@@ -7,11 +7,10 @@
 
 #+TITLE: Introduction to Linux
 #+AUTHOR: Stephen Brown
-
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/stsb11/7-CS-LinuxIntro">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/9-CS-LinuxIntro">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -20,6 +19,7 @@
       <li><a href="2_Lesson.html">Week2</a></li>
       <li><a href="3_Lesson.html">Week3</a></li>
       <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
       <li><a href="assessment.html">Assessment</a></li>
     </ul>
   </div>

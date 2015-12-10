@@ -166,7 +166,7 @@ head recentHistory.txt
 cd /
 du | sort -nr
 #+end_src
-- This time, there will be a bit of a delay while the computer browses the files availble and sorts them, then your enormous list of files will be output. 
+- This time, there will be a bit of a delay while the computer browses the files available and sorts them, then your enormous list of files will be output. 
 - Finally, we can take this output and just ask to see the first 10 results by piping the output through =head=...
 #+begin_src
 du | sort -nr | head
@@ -180,10 +180,10 @@ du | sort -nr | head
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Redirect the contents of your 'My documents' directory into a text file. Open the file in a text editor, and put the command you used at the top of the file. Save it, and upload it. 
+- *Silver:* Redirect the contents of your 'My documents' directory into a text file. Open the file in a text editor, and use the command you used as the file name. save it and upload it. 
 
 
-- *Gold:* The =ps aux= command shows a list of every program running on your Linux machine. Redirect the last 10 items from the output from this command into a text file and put the command you used at the top of the file. Save it, and upload it. 
+- *Gold:* The =ps aux= command shows a list of every program running on your Linux machine. Redirect the last 10 items from the output from this command into a text file and put the command you used as the file name. Save it, and upload it. 
 
 
 - *Platinum:* Produce a file called =alphaBash.txt=. 
