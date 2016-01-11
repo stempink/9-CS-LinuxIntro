@@ -105,7 +105,7 @@
    - Google Android
 - One you may not have heard of is Linux. Unlike all the Operating Systems named above, this one isn't written by a company, but instead is written and maintained by individuals around the world, who collaborate together to produce a free, open-source platform for users.  
 - Open source means that anyone can look at the code the operating system runs on, see exactly how it works and modify it to meet their own requirements. 
-
+- ydydydftyd
 #+BEGIN_HTML 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yVpbFMhOAwE" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
