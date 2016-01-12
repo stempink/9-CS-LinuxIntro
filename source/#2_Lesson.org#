@@ -109,7 +109,13 @@
 #+BEGIN_HTML
 <a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
 #+END_HTML
-- Once the session has booted up, type =cd /home/treasure_hunt= and scroll down to the *try it* section further down the page to continue.
+- Once the session has booted up, type:
+#+begin_src
+cd home
+cp -R * /tmp
+cd /tmp
+#+end_src
+- Now scroll down to the *try it* section further down the page to continue.
 - Alternatively, open the Linux VM using the link on your desktop, and log in using your network username and password. 
 - If you're going to work in a VM, then...
    - *NOTE: DON'T DO THESE STEPS IF YOU'RE USING THE BROWSER VERSION OF LINUX*
