@@ -90,7 +90,7 @@ for the JavaScript code in this tag.
 </li>
 <li>In this lesson, we'll learn to navigate around your files and look at what's in them. 
 </li>
-<li>To get started, you can use this superb emulator by <a href="http://www.bellard.org">Fabrice Bellard</a>&#x2026;
+<li>We'll use this superb emulator by <a href="http://www.bellard.org">Fabrice Bellard</a>&#x2026;
 </li>
 </ul>
 <iframe src="./js/jslinux/index.html" height=700px width=700px frameborder=0></iframe>
@@ -100,62 +100,18 @@ for the JavaScript code in this tag.
 </ul>
 <a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
 <ul class="org-ul">
-<li>Once the session has booted up, type <code>cd /home/treasure_hunt</code> and scroll down to the <b>try it</b> section further down the page to continue.
-</li>
-<li>Alternatively, open the Linux VM using the link on your desktop, and log in using your network username and password. 
-</li>
-<li>If you're going to work in a VM, then&#x2026;
-<ul class="org-ul">
-<li><b>NOTE: DON'T DO THESE STEPS IF YOU'RE USING THE BROWSER VERSION OF LINUX</b>
-</li>
-<li>Double click the Ubuntu icon on your desktop, and wait for it to boot.
-</li>
-<li>Enter your normal network username and password.
-</li>
-<li>Once you are presented with a prompt, enter <b>startx</b> and hit enter to start a graphical session.
-</li>
-<li>You'll need to log in as yourself once more.
-</li>
-<li>Open a Terminal session by clicking the "Activities" button in the top-left corner, then typing "Terminal" and hitting enter. 
-</li>
-<li>You'll have a window open that looks a little like this&#x2026;
-</li>
-</ul>
-</li>
-</ul>
-
-<div class="figure">
-<p><img src="./img/term.png" alt="term.png" />
-</p>
-</div>
-<ul class="org-ul">
-<li>We'll start by moving into a new directory (or folder as you might say in Windows), downloading some files from the web and then navigating through them.
-</li>
-<li>One by one, copy and paste these lines into your terminal&#x2026;
+<li>Once the session has booted up, type: 
 </li>
 </ul>
 <pre class="example">
-cd ~/Documents
-mkdir Linux_Work
-cd Linux_Work
-git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
-cd 9-CS-LinuxIntro-files/treasure_hunt
+cd /home
+cp -R * /tmp/
+cd /tmp/treasureHunt
 </pre>
-
 <ul class="org-ul">
-<li>What we've just done is&#x2026;
-<ul class="org-ul">
-<li>Change Directory into 'Documents'.
+<li>What these instructions do will become apparent as you work through this topic. 
 </li>
-<li>MaKe a new DIRectory called <i>LinuxWork</i>. 
-</li>
-<li>Change Directory into <i>LinuxWork</i>.
-</li>
-<li>Download some files from a website called 'GitHub.com'
-</li>
-<li>Change Directory into the directory containing these files we just downloaded.
-</li>
-</ul>
+<li><b>NOTE:</b> If you're working through this lesson using a Linux VM (your teacher will tell you), you will need to follow <a href="./2b_Lesson.html">this</a> set of instructions instead.
 </li>
 </ul>
 </div>
@@ -173,6 +129,16 @@ cd 9-CS-LinuxIntro-files/treasure_hunt
 <li>You'll need to learn to use three commands to complete this exercise.
 </li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3 try">
+<h3 id="sec-1-3">Present Working Directory</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>You'll need to know where you are in your filesystem. 
+</li>
+</ul>
 <pre class="example">
 pwd
 </pre>
@@ -181,18 +147,29 @@ pwd
 </li>
 <li>If you've followed the above instructions and try this, you should see that you're currently working in&#x2026;
 <ul class="org-ul">
-<li><code>&lt;SOMETHING&gt;/9-CS-LinuxIntro-files/treasure_hunt</code>
+<li><code>/tmp/treasure_hunt</code>
 </li>
 </ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-4" class="outline-3 try">
+<h3 id="sec-1-4">Listing directory contents</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Just like when you use 'My Computer' in Windows to browse your documents and files, it's useful to see what files you have in different directories.
 </li>
 </ul>
 <pre class="example">
-cd NAME_OF_DIRECTORY
+ls
 </pre>
 <ul class="org-ul">
-<li>Change Directory to somewhere else.
+<li>LiSt. Shows a list of the files and directories in the current directory. 
 </li>
-<li>You can get a more detailed list if you use <code>ls -l</code> instead. 
+<li><b>Pro tip:</b> You can get a more detailed list if you use <code>ls -l</code> instead. 
 </li>
 </ul>
 
@@ -203,11 +180,30 @@ cd NAME_OF_DIRECTORY
 <ul class="org-ul">
 <li>In the shot above, you can see the time and date when each file was last modified to the left of each file name.
 </li>
-<li>Entries which are directories (like <b>pages</b> and <b>source</b>) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
+<li>Entries which are directories (like <b>pages</b> and <b>source</b> in my example) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
 </li>
 <li>The size of the file in bytes is shown to the left of the month the file was last modified.
 </li>
 <li>The username and group of the person who created the file is shown here too.
+</li>
+<li><b>Pro tip:</b> Tap the <i>up</i> and <i>down</i> arrows on the keyboard to browse your previous commands.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3 try">
+<h3 id="sec-1-5">Change Directory</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>Sometimes, we'll want to work in a different directory (or folder, as you'd say in Windows)
+</li>
+</ul>
+<pre class="example">
+cd NAME_OF_DIRECTORY
+</pre>
+<ul class="org-ul">
+<li>Change Directory to somewhere else. You could type <code>cd a</code> for instance to move into directory a. 
 </li>
 <li>At the moment, you should be able to see four directories, imaginatively called <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code>. Let's Change Directory into a&#x2026;
 </li>
@@ -226,13 +222,20 @@ cd NAME_OF_DIRECTORY
 <li><b>Task:</b> Use <code>pwd</code> to get your bearings, then navigate into the <code>a</code> directory once more. 
 </li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-sec-1-6" class="outline-3 try">
+<h3 id="sec-1-6">Concatenate</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
+</li>
+</ul>
 <pre class="example">
 cat FILENAME
 </pre>
 <ul class="org-ul">
-<li>This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
-</li>
 <li>Assuming you're in the <code>a</code> directory, type <code>ls</code> to see whats in there.
 </li>
 </ul>
@@ -251,15 +254,15 @@ cat FILENAME
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3 badge">
-<h3 id="sec-1-3">Badge It</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-sec-1-7" class="outline-3 badge">
+<h3 id="sec-1-7">Badge It</h3>
+<div class="outline-text-3" id="text-1-7">
 <ul class="org-ul">
-<li><b>Silver:</b> Explore the <code>treasurehunt</code> directory and its sub-directories, and <code>cat</code> the different files until you find the secret password. <b>Create a text file and save it, using the password as your file name. Then upload this for the silver badge.</b>
+<li><b>Silver:</b> Explore the <code>treasureHunt</code> directory and its sub-directories, and <code>cat</code> the different files until you find the secret password. <b>Create a text file and save it, using the password as your file name. Then upload this for the silver badge.</b>
 </li>
 <li><b>Gold:</b> In the file you created for the silver badge, add a short explanation of what <code>ls</code>, <code>cd</code>, <code>cat</code> and <code>pwd</code> do in a Linux terminal. 
 </li>
-<li><b>Platinum:</b> Make a new directory called <code>LinuxChamp</code> inside the <code>/var/root/</code> directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the <code>pwd</code> and <code>ls</code> command from the terminal as evidence you've completed the task.
+<li><b>Platinum:</b> Make a new directory called <code>LinuxChamp</code> inside the <code>/tmp/</code> directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the <code>pwd</code> and <code>ls</code> command from the terminal as evidence you've completed the task.
 </li>
 </ul>
 </div>
@@ -267,7 +270,7 @@ cat FILENAME
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="validation"></p>
 </div>
 </body>
 </html>

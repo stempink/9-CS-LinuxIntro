@@ -101,7 +101,7 @@
 - To get the most out of Linux, you'll want to learn to use the command line to get things done. Linux is based around an operating system called [[https://en.wikipedia.org/wiki/Unix][UNIX]] that was first devised and written in 1969. Computers weren't really used with mice, touch screens or graphics back then. Many used [[https://en.wikipedia.org/wiki/Line_printer][line printers]] to produce their output rather than a monitor; thankfully, things have moved on. 
 - Many of the commands you'll learn are unchanged since the original UNIX release. Depite these commands possibly being older than your parents, they are used daily on the vast majority of the World's most powerful computers. 
 - In this lesson, we'll learn to navigate around your files and look at what's in them. 
-- To get started, you can use this superb emulator by [[http://www.bellard.org][Fabrice Bellard]]...
+- We'll use this superb emulator by [[http://www.bellard.org][Fabrice Bellard]]...
 #+BEGIN_HTML
 <iframe src="./js/jslinux/index.html" height=700px width=700px frameborder=0></iframe>
 #+END_HTML
@@ -109,33 +109,14 @@
 #+BEGIN_HTML
 <a href="#" onClick="window.open('./js/jslinux/index.html','pagename','resizable,height=700,width=700'); return false;">Click here for pop-up window version</a><noscript>You need Javascript to use the previous link.</noscript>
 #+END_HTML
-- Once the session has booted up, type =cd /home/treasure_hunt= and scroll down to the *try it* section further down the page to continue.
-- Alternatively, open the Linux VM using the link on your desktop, and log in using your network username and password. 
-- If you're going to work in a VM, then...
-   - *NOTE: DON'T DO THESE STEPS IF YOU'RE USING THE BROWSER VERSION OF LINUX*
-   - Double click the Ubuntu icon on your desktop, and wait for it to boot.
-   - Enter your normal network username and password.
-   - Once you are presented with a prompt, enter *startx* and hit enter to start a graphical session.
-   - You'll need to log in as yourself once more.
-   - Open a Terminal session by clicking the "Activities" button in the top-left corner, then typing "Terminal" and hitting enter. 
-   - You'll have a window open that looks a little like this...
-[[./img/term.png]]
-   - We'll start by moving into a new directory (or folder as you might say in Windows), downloading some files from the web and then navigating through them.
-   - One by one, copy and paste these lines into your terminal...
+- Once the session has booted up, type: 
 #+begin_src
-cd ~/Documents
-mkdir Linux_Work
-cd Linux_Work
-git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
-cd 9-CS-LinuxIntro-files/treasure_hunt
+cd /home
+cp -R * /tmp/
+cd /tmp/treasureHunt
 #+end_src
-
-- What we've just done is...
-   - Change Directory into 'Documents'.
-   - MaKe a new DIRectory called /LinuxWork/. 
-   - Change Directory into /LinuxWork/.
-   - Download some files from a website called 'GitHub.com'
-   - Change Directory into the directory containing these files we just downloaded.
+- What these instructions do will become apparent as you work through this topic. 
+- *NOTE:* If you're working through this lesson using a Linux VM (your teacher will tell you), you will need to follow [[./2b_Lesson.html][this]] set of instructions instead.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
@@ -144,22 +125,46 @@ cd 9-CS-LinuxIntro-files/treasure_hunt
 - In the treasure directory that you're currently in, there are more directories and some files within them. 
 - Many of these files contain jokes. One of them contains a secret code that you can use to collect your silver badge for this lesson. 
 - You'll need to learn to use three commands to complete this exercise.
+
+** Present Working Directory
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- You'll need to know where you are in your filesystem. 
 #+begin_src
 pwd
 #+end_src
 - Present Working Directory. Outputs the current directory you're in.
 - If you've followed the above instructions and try this, you should see that you're currently working in...
-   - =<SOMETHING>/9-CS-LinuxIntro-files/treasure_hunt=
+   - =/tmp/treasure_hunt=
+
+
+** Listing directory contents
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Just like when you use 'My Computer' in Windows to browse your documents and files, it's useful to see what files you have in different directories.
+#+begin_src
+ls
+#+end_src
+- LiSt. Shows a list of the files and directories in the current directory. 
+- *Pro tip:* You can get a more detailed list if you use =ls -l= instead. 
+[[./img/ls-l.png]]
+- In the shot above, you can see the time and date when each file was last modified to the left of each file name.
+- Entries which are directories (like *pages* and *source* in my example) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
+- The size of the file in bytes is shown to the left of the month the file was last modified.
+- The username and group of the person who created the file is shown here too.
+- *Pro tip:* Tap the /up/ and /down/ arrows on the keyboard to browse your previous commands.
+
+** Change Directory
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Sometimes, we'll want to work in a different directory (or folder, as you'd say in Windows)
 #+begin_src
 cd NAME_OF_DIRECTORY
 #+end_src
-- Change Directory to somewhere else.
-- You can get a more detailed list if you use =ls -l= instead. 
-[[./img/ls-l.png]]
-- In the shot above, you can see the time and date when each file was last modified to the left of each file name.
-- Entries which are directories (like *pages* and *source*) have the letter 'd' on the far left-hand side of the column. Some Linux systems will also change the colour of the directory names for you, like in the image above. 
-- The size of the file in bytes is shown to the left of the month the file was last modified.
-- The username and group of the person who created the file is shown here too.
+- Change Directory to somewhere else. You could type =cd a= for instance to move into directory a. 
 - At the moment, you should be able to see four directories, imaginatively called =a=, =b=, =c= and =d=. Let's Change Directory into a...
 - Type: =cd a=
 - Now let's LiSt the files in this directory. Type: =ls=
@@ -169,10 +174,14 @@ cd NAME_OF_DIRECTORY
 - In Linux type Operating Systems, =..= means 'back one level'. You can use a few of them at a time to navigate around more quickly. E.g. =cd ../..= to drop back two directory levels, or =cd ../b= to drop back a level, then change into the =b= directory if you were already working inside =a=.
 - *Task:* Use =pwd= to get your bearings, then navigate into the =a= directory once more. 
 
+** Concatenate
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
 #+begin_src
 cat FILENAME
 #+end_src
-- This command is actually short for conCATenate, which means to add one thing to the end of another. While it can do this, its more commonly used by Linux users to quickly see the contents of files.
 - Assuming you're in the =a= directory, type =ls= to see whats in there.
 [[./img/cat.png]]
 - Let's see what's inside the =otherfile.txt= document. Type =cat ot= like in the screenshot above.
@@ -182,6 +191,6 @@ cat FILENAME
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Explore the =treasurehunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
+- *Silver:* Explore the =treasureHunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
 - *Gold:* In the file you created for the silver badge, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
-- *Platinum:* Make a new directory called =LinuxChamp= inside the =/var/root/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
+- *Platinum:* Make a new directory called =LinuxChamp= inside the =/tmp/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
