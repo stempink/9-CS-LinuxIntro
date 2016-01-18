@@ -143,21 +143,6 @@ cd /home
 cp -R * /tmp
 cd /tmp/moveIt
 #+end_src
-- You can now ignore the next few instructions, and scroll to the next section (copy it).
-- *Alternatively* if you're using the desktop VM, you'll need to log in, open a terminal session and type:
-#+begin_src
-cd ~/Documents/Linux_Work/9-CS-LinuxIntro-files/moveIt
-#+end_src
-
-- *NOTE:* If the command above gives an error, copy/paste these next lines, then try the one above again.
-#+begin_src
-cd ~/Documents
-mkdir Linux_Work
-cd Linux_Work
-git clone https://github.com/stsb11/9-CS-LinuxIntro-files.git
-cd 9-CS-LinuxIntro-files/moveIt
-#+end_src
-
 ** Copy It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -171,7 +156,6 @@ cd 9-CS-LinuxIntro-files/moveIt
 - We could put a copy in another folder if we'd wanted...
 - Type: =cp fileA.txt ./otherDir/anotherOne.txt=
 - If you =cd= into the =otherDir=, and do =ls= you'll see a copy of the file in there too.
-
 ** Move It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -181,7 +165,6 @@ cd 9-CS-LinuxIntro-files/moveIt
 - Type =mv anotherOne.txt ../secretDir/= 
 - If you do =ls=, you'll see that your file is now gone. Where did it go? What do you think the =..= did in the destination file path (=../secretDir/=) that you wrote?
 - You can rename files by moving them too. You could do =mv kittenpic.jpg dogpic.jpg= for instance, which would rename =kittenpic.jpg= to =dogpic.jpg=.
-
 ** Remove It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -190,7 +173,6 @@ cd 9-CS-LinuxIntro-files/moveIt
 - Navigate into the =secretDir= directory.
 - Type =rm anotherOne.txt= and hit enter.
 - If you now do =ls=, you'll see that your file is gone. Linux tends to work on the assumption you know what you're doing, so won't ask if you're sure when you try and delete a file. 
-
 ** Going Wild
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -213,8 +195,7 @@ cd 9-CS-LinuxIntro-files/moveIt
    - any number of letters/numbers
    - and copies these files to the directory below the current one. 
 - Clever, eh?
-- *Task:* Delete all the files that have a letter =a= in the =moreDocs= directory.
-
+- *Task:* Delete all the files that have filenames starting with =a_a= in the =moreDocs= directory.
 ** Touchy Subject
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -222,7 +203,7 @@ cd 9-CS-LinuxIntro-files/moveIt
 - Sometimes, you'll need to make new empty files ready to put things into.
 - To do this, simply use the =touch= command, like this.
    - =touch newFile.txt=
-   - =touch ~/home/topsecretfile.txt=
+   - =touch ~/tmp/moveIt/topsecretfile.txt=
 - You can make new directories with =mkdir=
    - =mkdir cheatMode=
    - =mkdir otherDir/1D_posters=
@@ -242,10 +223,10 @@ cd 9-CS-LinuxIntro-files/moveIt
 
 
 - *Gold:* Write commands which would do the following...
-   - Move all the =.txt= files in the current the =moveIt/otherDir/badge= directory to the =newDir= directory.
+   - Move all the =.txt= files in the current the =moveIt/otherDir/badge/= directory to the =myBadgeDir= directory.
    - Remove all the =.jpg= files in the current directory.
-   - Move into the =newDir= directory, and remove all the files that start =a_a=
+   - Move into the =myBadgeDir= directory, and remove all the files that start =tes=
    - Rename the =a_beatle.txt= file to =BEETLE.txt=
-   - Do a =ls=, screenshot the Terminal window and upload the image.
+   - Do a =pwd=, then a =ls=, screenshot the Terminal window and upload the image.
 
 - *Platinum:* When you type commands, you can run them through other commands to help when there are thousands (or billions if you work at Facebook) of files to work with. One of them is =grep=. Investigate and show how to list the contents of a directory, showing only files that contain =nt=. Put the command in a file called =platanswer.txt= and write the answer in the file and upload it for marking.
