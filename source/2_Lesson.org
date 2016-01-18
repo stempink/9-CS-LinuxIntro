@@ -113,7 +113,7 @@
 #+begin_src
 cd /home
 cp -R * /tmp/
-cd /tmp/treasureHunt
+cd /tmp/treasure_hunt
 #+end_src
 - What these instructions do will become apparent as you work through this topic. 
 - *NOTE:* If you're working through this lesson using a Linux VM (your teacher will tell you), you will need to follow [[./2b_Lesson.html][this]] set of instructions instead.
@@ -137,7 +137,6 @@ pwd
 - Present Working Directory. Outputs the current directory you're in.
 - If you've followed the above instructions and try this, you should see that you're currently working in...
    - =/tmp/treasure_hunt=
-
 
 ** Listing directory contents
 :PROPERTIES:
@@ -191,6 +190,6 @@ cat FILENAME
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Explore the =treasureHunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
+- *Silver:* Explore the =treasure_hunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
 - *Gold:* In the file you created for the silver badge, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
 - *Platinum:* Make a new directory called =LinuxChamp= inside the =/tmp/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.
