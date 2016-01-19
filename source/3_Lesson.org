@@ -170,7 +170,7 @@ cd /tmp/moveIt
 :HTML_CONTAINER_CLASS: code
 :END:
 - If you can copy and move files, the last thing to do is be able to delete the ones you don't want.
-- Navigate into the =secretDir= directory.
+- Navigate into the =../secretDir= directory.
 - Type =rm anotherOne.txt= and hit enter.
 - If you now do =ls=, you'll see that your file is gone. Linux tends to work on the assumption you know what you're doing, so won't ask if you're sure when you try and delete a file. 
 ** Going Wild
@@ -195,7 +195,7 @@ cd /tmp/moveIt
    - any number of letters/numbers
    - and copies these files to the directory below the current one. 
 - Clever, eh?
-- *Task:* Delete all the files that have filenames starting with =a_a= in the =moreDocs= directory.
+- *Task:* Delete all the files that have filenames starting with =a_be= in the =moreDocs= directory you're currently in.
 ** Touchy Subject
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -203,11 +203,10 @@ cd /tmp/moveIt
 - Sometimes, you'll need to make new empty files ready to put things into.
 - To do this, simply use the =touch= command, like this.
    - =touch newFile.txt=
-   - =touch ~/tmp/moveIt/topsecretfile.txt=
+   - =touch /tmp/moveIt/topsecretfile.txt=
 - You can make new directories with =mkdir=
    - =mkdir cheatMode=
-   - =mkdir otherDir/1D_posters=
-
+   - =mkdir /tmp/moveIt/otherDir/1D_posters=
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
