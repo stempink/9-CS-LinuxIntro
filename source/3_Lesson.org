@@ -211,7 +211,7 @@ cd /tmp/moveIt
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Browse into the =moveIt/otherDir/badge= directory and attempt the following...
+- Browse into the =/tmp/moveIt/otherDir/badge= directory and attempt the following...
 
 
 - *Silver:* Complete the following...
@@ -222,10 +222,13 @@ cd /tmp/moveIt
 
 
 - *Gold:* Write commands which would do the following...
-   - Move all the =.txt= files in the current the =moveIt/otherDir/badge/= directory to the =myBadgeDir= directory.
+   - Move all the =.txt= files in the =/tmp/moveIt/otherDir/badge/= directory to the =myBadgeDir= directory.
    - Remove all the =.jpg= files in the current directory.
-   - Move into the =myBadgeDir= directory, and remove all the files that start =tes=
-   - Rename the =a_beatle.txt= file to =BEETLE.txt=
+   - Move into the =myBadgeDir= directory that you made for the silver badge task, and remove all the files that start =a_anta=
+   - Rename the =a_beatle.txt= file to =BEETLE.txt= (*Tip:* You use mv to achieve this)
    - Do a =pwd=, then a =ls=, screenshot the Terminal window and upload the image.
 
-- *Platinum:* When you type commands, you can run them through other commands to help when there are thousands (or billions if you work at Facebook) of files to work with. One of them is =grep=. Investigate and show how to list the contents of a directory, showing only files that contain =nt=. Put the command in a file called =platanswer.txt= and write the answer in the file and upload it for marking.
+
+- *Platinum:* When you type commands, you can run them through other commands to help when there are thousands (or billions if you work at Facebook) of files to work with. One of them is =grep=. 
+- Read ahead into the online notes to find out how to use =pipes=. Investigate how how to list the contents of a directory, showing only files that contain =nt= (like =a_antler.txt=). 
+- Put the command you use in a file called =platAnswer.txt=, save it and upload for marking.
