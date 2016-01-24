@@ -130,50 +130,54 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
+- We're actually going to work on a different computer today. A web-server that you can create pages on which your friends can see. 
+- We can't connect to it with the pop-up JavaScript emulator you've used in the previous sessions, so start by double-clicking the "Ubuntu" icon on your Windows desktop.
+- Once the session has started, log in with your standard network username and password.
+- *Note:* As you type your password, you won't see anything. This is normal; just don't look at the screen and you won't notice.
+- When logged in, type =startx= to get a more attractive interface. You'll need to log in to this too.
+- When on the Ubuntu desktop, click the 'Activities' link in the top-left corner or the screen and type =Terminal= to load up a the command line so we can get started.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- One of the great things about using Linux is the ability to work on other machines around the World easily. This is often achieved using a program called SSH, short for 'secure shell'. It's remarkably easy to connect to another computer.
+- In the terminal window, type:
+#+begin_src
+ssh 00zz11@studentweb
+#+end_src
+- Replace the =00zz11= with your network username.
+- After a moment, you'll be asked for your password again.
+- If you type it correctly, you'll have a new terminal prompt, along the lines of:
+- =00zz11@brgrastudentweb:~/=
+   - The =00zz11= lets you know who you're logged in as.
+   - The =@brgrastudentweb= tells you the name of the server you're connected to.
+   - =~/= tells you that you're in your 'home' directory (~ is used as shorthand)
+- If you type =ls=, you'll see that there is one file and one directory available to you.
+- Use =cd= to change into the =www= directory.
+- Anything you put in here can be seen by any other student or staff member. It's not visible from outside School; this is known as an Intranet.
+- The address for your published content will be: http://studentweb/~yourusername
+- *Note:* Everything you do on this computer is logged, and everything can be traced back to you. You are solely responsible for what is published in your Intranet space. Do not publish anything onto the pages that you would not be happy for your parents and/or the Headteacher to see, and do not publish images of other people without their permission. Do not publish remarks about other students or staff, anything hateful, use the service to do anything illegal or publish anything likely to cause offence. Any content can be removed at any time without notice. 
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Having typed =cd www= you can type =ls= to see what's in your web directory.
+- You'll see a single file which has been automatically created for you, called =index.html=
+- We'll edit this file to create our pages, using the emacs editor.
 [[./img/3_1.png]]
-- Load up emacs either by loading it from the applications menu or by typing =emacs= in the terminal. They both work the same way, but the version you load with the mouse will also allow you to use the mouse to navigate around documents. The screen will look like the image above.
-- We'll create a quick web page to get to grips with working on a file.
+- Load up emacs by typing =emacs= in the terminal. The screen will look like the image above.
 - emacs uses (about 2000) keyboard shortcuts to allow users to achieve all manner of activities. We'll only need a tiny number of these to get some productive work done. 
 - Type =C-x, C-f= which is the combination to open a new file.
 [[./img/3_2.png]]
-- At the bottom of the screen, the computer will show you the =~/= prompt, which is inviting you to enter the name of the file you'd like to open or create. 
-- Type =index.html= and hit enter to make a new, empty HTML file in your home folder.
-- Use your mouse to copy and paste this into the new, empty document...
-
-#+begin_src
-<html>
-<head><title>
-I'm a l33t Ha><0r
-</title>
-
-<body>
-Computer Science ftw!
-</body>
-
-</html>
-#+end_src
-
+- At the bottom of the screen, the computer will show you the =~/www/= prompt, which is inviting you to enter the name of the file you'd like to open or create. 
+- Type =index.html= and hit enter to load the file. 
+- Use the arrow keys to the section that says, 'this page is under construction' and change the text to say something else.
 - Save the work with =C-x, C-s=.
 - Quit out of emacs using =C-x, C-c=.
-- From the terminal, load your file up by typing =firefox newfile.html=
+- Load the Firefox web browser (Look in 'Activities' in the top-left again) and view your page on the Intranet. Try some of your friends pages too.  
 - For a taste of the 1970s, you can also use a terminal web browser called 'lynx' to browse the web. Type things liks =lynx google.co.uk= to get started, and type =q= to quit when done.
 - *Task:* Try opening your file again, changing the file a little and saving it without looking at your notes.
-
-- Let's go one better, and (temporarily) host a web server in the current directory we're in on our machine. Type this in the console.
-
-#+begin_src
-ifconfig | grep 'inet addr:'
-#+end_src
-
-- The first of the two lines shown will contain your IP address (it'll say something like 192.168.1.2).
-- Make a note of this. You'll need to give this to someone else to let them view your page. 
-- Next, type...
-#+begin_src
-twistd -n web -p 80 --path . 
-#+end_src
-- Your web server is now live. A user on another computer on your network can view your web page by browsing to: =http://192.168.1.2/= (or whatever your IP address is).
 - Users on Linux machines all around the World run web servers in a similar way to build the World Wide Web.
-- When you're done serving web pages, press =Ctrl+C= to stop the server and get your command line back.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code

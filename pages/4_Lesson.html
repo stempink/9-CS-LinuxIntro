@@ -152,15 +152,82 @@ for the JavaScript code in this tag.
 <div id="outline-container-sec-1-4" class="outline-3 try">
 <h3 id="sec-1-4">Try It</h3>
 <div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>We're actually going to work on a different computer today. A web-server that you can create pages on which your friends can see. 
+</li>
+<li>We can't connect to it with the pop-up JavaScript emulator you've used in the previous sessions, so start by double-clicking the "Ubuntu" icon on your Windows desktop.
+</li>
+<li>Once the session has started, log in with your standard network username and password.
+</li>
+<li><b>Note:</b> As you type your password, you won't see anything. This is normal; just don't look at the screen and you won't notice.
+</li>
+<li>When logged in, type <code>startx</code> to get a more attractive interface. You'll need to log in to this too.
+</li>
+<li>When on the Ubuntu desktop, click the 'Activities' link in the top-left corner or the screen and type <code>Terminal</code> to load up a the command line so we can get started.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3 try">
+<h3 id="sec-1-5">Learn It</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>One of the great things about using Linux is the ability to work on other machines around the World easily. This is often achieved using a program called SSH, short for 'secure shell'. It's remarkably easy to connect to another computer.
+</li>
+<li>In the terminal window, type:
+</li>
+</ul>
+<pre class="example">
+ssh 00zz11@studentweb
+</pre>
+<ul class="org-ul">
+<li>Replace the <code>00zz11</code> with your network username.
+</li>
+<li>After a moment, you'll be asked for your password again.
+</li>
+<li>If you type it correctly, you'll have a new terminal prompt, along the lines of:
+</li>
+<li><code>00zz11@brgrastudentweb:~/</code>
+<ul class="org-ul">
+<li>The <code>00zz11</code> lets you know who you're logged in as.
+</li>
+<li>The <code>@brgrastudentweb</code> tells you the name of the server you're connected to.
+</li>
+<li><code>~/</code> tells you that you're in your 'home' directory (~ is used as shorthand)
+</li>
+</ul>
+</li>
+<li>If you type <code>ls</code>, you'll see that there is one file and one directory available to you.
+</li>
+<li>Use <code>cd</code> to change into the <code>www</code> directory.
+</li>
+<li>Anything you put in here can be seen by any other student or staff member. It's not visible from outside School; this is known as an Intranet.
+</li>
+<li>The address for your published content will be: <a href="http://studentweb/~yourusername">http://studentweb/~yourusername</a>
+</li>
+<li><b>Note:</b> Everything you do on this computer is logged, and everything can be traced back to you. You are solely responsible for what is published in your Intranet space. Do not publish anything onto the pages that you would not be happy for your parents and/or the Headteacher to see, and do not publish images of other people without their permission. Do not publish remarks about other students or staff, anything hateful, use the service to do anything illegal or publish anything likely to cause offence. Any content can be removed at any time without notice. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3 try">
+<h3 id="sec-1-6">Try It</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Having typed <code>cd www</code> you can type <code>ls</code> to see what's in your web directory.
+</li>
+<li>You'll see a single file which has been automatically created for you, called <code>index.html</code>
+</li>
+<li>We'll edit this file to create our pages, using the emacs editor.
+</li>
+</ul>
 
 <div class="figure">
 <p><img src="./img/3_1.png" alt="3_1.png" />
 </p>
 </div>
 <ul class="org-ul">
-<li>Load up emacs either by loading it from the applications menu or by typing <code>emacs</code> in the terminal. They both work the same way, but the version you load with the mouse will also allow you to use the mouse to navigate around documents. The screen will look like the image above.
-</li>
-<li>We'll create a quick web page to get to grips with working on a file.
+<li>Load up emacs by typing <code>emacs</code> in the terminal. The screen will look like the image above.
 </li>
 <li>emacs uses (about 2000) keyboard shortcuts to allow users to achieve all manner of activities. We'll only need a tiny number of these to get some productive work done. 
 </li>
@@ -173,71 +240,30 @@ for the JavaScript code in this tag.
 </p>
 </div>
 <ul class="org-ul">
-<li>At the bottom of the screen, the computer will show you the <code>~/</code> prompt, which is inviting you to enter the name of the file you'd like to open or create. 
+<li>At the bottom of the screen, the computer will show you the <code>~/www/</code> prompt, which is inviting you to enter the name of the file you'd like to open or create. 
 </li>
-<li>Type <code>index.html</code> and hit enter to make a new, empty HTML file in your home folder.
+<li>Type <code>index.html</code> and hit enter to load the file. 
 </li>
-<li>Use your mouse to copy and paste this into the new, empty document&#x2026;
+<li>Use the arrow keys to the section that says, 'this page is under construction' and change the text to say something else.
 </li>
-</ul>
-
-<pre class="example">
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;
-I'm a l33t Ha&gt;&lt;0r
-&lt;/title&gt;
-
-&lt;body&gt;
-Computer Science ftw!
-&lt;/body&gt;
-
-&lt;/html&gt;
-</pre>
-
-<ul class="org-ul">
 <li>Save the work with <code>C-x, C-s</code>.
 </li>
 <li>Quit out of emacs using <code>C-x, C-c</code>.
 </li>
-<li>From the terminal, load your file up by typing <code>firefox newfile.html</code>
+<li>Load the Firefox web browser (Look in 'Activities' in the top-left again) and view your page on the Intranet. Try some of your friends pages too.  
 </li>
 <li>For a taste of the 1970s, you can also use a terminal web browser called 'lynx' to browse the web. Type things liks <code>lynx google.co.uk</code> to get started, and type <code>q</code> to quit when done.
 </li>
 <li><b>Task:</b> Try opening your file again, changing the file a little and saving it without looking at your notes.
 </li>
-
-<li>Let's go one better, and (temporarily) host a web server in the current directory we're in on our machine. Type this in the console.
-</li>
-</ul>
-
-<pre class="example">
-ifconfig | grep 'inet addr:'
-</pre>
-
-<ul class="org-ul">
-<li>The first of the two lines shown will contain your IP address (it'll say something like 192.168.1.2).
-</li>
-<li>Make a note of this. You'll need to give this to someone else to let them view your page. 
-</li>
-<li>Next, type&#x2026;
-</li>
-</ul>
-<pre class="example">
-twistd -n web -p 80 --path .
-</pre>
-<ul class="org-ul">
-<li>Your web server is now live. A user on another computer on your network can view your web page by browsing to: <code>http://192.168.1.2/</code> (or whatever your IP address is).
-</li>
 <li>Users on Linux machines all around the World run web servers in a similar way to build the World Wide Web.
 </li>
-<li>When you're done serving web pages, press <code>Ctrl+C</code> to stop the server and get your command line back.
-</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3 code">
-<h3 id="sec-1-5">Try It</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-sec-1-7" class="outline-3 code">
+<h3 id="sec-1-7">Try It</h3>
+<div class="outline-text-3" id="text-1-7">
 <ul class="org-ul">
 <li>If you were coding a large program or using emacs to read a large document, you might end up with hundreds of lines you've need to be able to quickly get through. The following commands are useful for navigating through a document without needing to take your hands off the keyboard:
 
@@ -276,9 +302,9 @@ twistd -n web -p 80 --path .
 </div>
 </div>
 
-<div id="outline-container-sec-1-6" class="outline-3 code">
-<h3 id="sec-1-6">Try It</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-sec-1-8" class="outline-3 code">
+<h3 id="sec-1-8">Try It</h3>
+<div class="outline-text-3" id="text-1-8">
 <ul class="org-ul">
 <li>The emacs community also include several games within emacs.
 </li>
@@ -305,9 +331,9 @@ twistd -n web -p 80 --path .
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-7" class="outline-3 badge">
-<h3 id="sec-1-7">Badge It</h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-sec-1-9" class="outline-3 badge">
+<h3 id="sec-1-9">Badge It</h3>
+<div class="outline-text-3" id="text-1-9">
 <ul class="org-ul">
 <li><b>Silver:</b> Write a tutorial (in emacs) for someone who's never used emacs before to explain how to make a new file, change it, save it and quit emacs.
 </li>
@@ -317,6 +343,11 @@ twistd -n web -p 80 --path .
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
 </div>
 </body>
 </html>
