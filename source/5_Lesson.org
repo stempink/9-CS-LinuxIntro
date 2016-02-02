@@ -180,13 +180,13 @@ du | sort -nr | head
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Redirect the contents of your 'My documents' directory into a text file. Open the file in a text editor, and use the command you used as the file name. save it and upload it. 
+- *Silver:* Using the terminal, =cd= into your =My Documents= directory. Redirect the contents of your 'My documents' directory into a text file called =silver.txt=. Upload the file to BourneToLearn. 
 
 
-- *Gold:* The =ps aux= command shows a list of every program running on your Linux machine. Redirect the last 10 items from the output from this command into a text file and put the command you used as the file name. Save it, and upload it. 
+- *Gold:* The =ps aux= command shows a list of every program running on your Linux machine. Redirect the *last 10 items* from the output from this command into a text file called =goldbadge.txt=. Save it, and upload it. 
 
 
-- *Platinum:* Produce a file called =alphaBash.txt=. 
+- *Platinum:* Produce a file called =platinum.txt=. 
    - Put your command history in it...
    - In reverse order...
    - Showing only the first 10 and last *20* commands entered.
