@@ -190,6 +190,10 @@ cat FILENAME
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- Attempt the badge tasks below. If you're not sure how to navigate the filesystem, the video tutorial below goes over it again, with examples, to help you achieve the badge. 
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/tAb8yxnWfj8" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 - *Silver:* Explore the =treasure_hunt= directory and its sub-directories, and =cat= the different files until you find the secret password. *Create a text file and save it, using the password as your file name. Then upload this for the silver badge.*
 - *Gold:* In the file you created for the silver badge, add a short explanation of what =ls=, =cd=, =cat= and =pwd= do in a Linux terminal. 
 - *Platinum:* Make a new directory called =LinuxChamp= inside the =/tmp/= directory, and move one of the joke files from the earlier directory into it. Screenshot the results of the =pwd= and =ls= command from the terminal as evidence you've completed the task.

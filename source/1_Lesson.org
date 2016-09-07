@@ -133,21 +133,14 @@
    - Xmonad
    - MATE
    - LXDE
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- There are now lots of different versions of Linux being developed, all with different strengths. The most popular at the moment is called 'Ubuntu' and is freely available for download on their website. 
-- Using the graphical front-end for Linux is a nice way to use the computer to browse the web, but things start to become much more interesting when we start using the =Terminal= to enter text commands directly into the computer. There'll be more on this in the coming lessons. 
-
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Answer as many of the following questions as possible to collect the badges.
-- *Silver:* One Linux distribution is 'Ubuntu'. Find out about three others, and write a sentence about what makes each unique. 
+- *Silver:* One Linux graphical desktop environment is 'GNOME'. Find out about three others, and write a sentence about what makes each unique. If you're writing your answers in Word, you could include a screenshot of each.
 - *Gold:* Write a short piece explaining the history of Linux. Include:
    - What operating system it's based on,
    - When it came out,
    - At least 3 Linux facts.
-- *Platinum:* Linux users love to use the command line. Find out three different commands, and briefly explain what they do. 
+- *Platinum:* Linux users often use the command line. Find out three different commands, and /briefly/ explain what they do. 
