@@ -211,6 +211,10 @@ cd /tmp/moveIt
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- Hopefully, you'll now feel confident with manipulating files. If not, the video tutorial below goes through everything covered in the notes above. 
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/PYyLdMxb7wM" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 - Browse into the =/tmp/moveIt/otherDir/badge= directory and attempt the following...
 
 
