@@ -181,7 +181,7 @@ cd /tmp/moveIt
 - Let's try. Type: =cd= into the =moreDocs= directory and =ls= the contents.
 [[./img/4_2.png]]
 - We're going to delete the =a_hamster.txt= and =a_horse.txt= files. They both start with =a_h=.
-- Type: =rm a_h* and then do another =ls -l=
+- Type: =rm a_h*= and then do another =ls -l=
 - That last command told the OS to remove all files in the current directory that start with =a_h= and then have any number of characters after it in the filename.
 - This only describes the hamster and horse files, which is why they're the only ones to be removed.
 - *Task:* Delete the =a_antagonistic.txt= and =a_antarctica.txt=
