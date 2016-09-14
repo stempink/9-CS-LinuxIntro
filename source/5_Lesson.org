@@ -130,6 +130,10 @@ echo "This is a little bit more text." >> whatsit.txt
 - You can type =history= to see (up to) the last 500 commands you've entered. Try it.
 - It'd be nice to keep this to have a record of what you've done in the past. I've been using Linux for a while, and still look over my own history from time to time; it's handy to refer back to.
 - *Task:* Redirect the contents of the history command into a file called =recentHistory.txt=
+- If you're struggling with this, the video below shows some practical examples:
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/e00wQU78fAE" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
@@ -175,7 +179,10 @@ du | sort -nr | head
 - Many Linux command-line programs can be given parameters like this to modify how they work. 
 - Linux has a built in manual that you can use to find out more about any command you're using. Type =man more= for instance, to see more information avout the =more= command. 
 - When browsing =man= pages, use the space bar to move forward a whole page, or the up/down arrows to move one line at a time. Tap =q= to quit.
-
+- You can watch a short demo of different ways to use pipes here.
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/5BmthF8lK6I" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
