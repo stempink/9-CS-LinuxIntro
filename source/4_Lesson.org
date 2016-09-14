@@ -209,6 +209,10 @@ ssh 00zz11@studentweb
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- You should now be able to attempt the badge tasks. If you're unsure, the video tutorial below demonstrates using emacs to edit a webpage that you can see anywhere in school when you're connected to our WiFi network.
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/9sGcNsq0QEo" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 - *Silver:* Write a tutorial (in emacs) for someone who's never used emacs before to explain how to make a new file, change it, save it and quit emacs.
 - *Gold:* Research how to cut, copy and paste in emacs. Write this on the bottom of your answer to the silver badge. /Note:/ It's not called cut, copy and paste in UNIX-like systems (for example, linux).
 - *Platinum:* The other popular text editor is =vi=. Find out how to edit a file, save it and quit. Give your teacher a demonstration (or add it to your silver/gold notes to collect this badge).
