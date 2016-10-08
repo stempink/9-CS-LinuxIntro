@@ -1,0 +1,137 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+
+#+TITLE: Intro to Linux Homework
+#+AUTHOR: Xiaohui Ellis
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/stsb11/9-CS-LinuxIntro">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Homework 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+** Homework 1
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Write a short report/presentation about another Linux distro. Include screenshots and all its useful features.
+
+** Homework 2
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Research the following and answer each question with a paragraph using complete sentences (not copy and paste from the Internet) and no spelling mistakes.
+
+  1. Linux is a free and open source OS.  What does it mean by open source?
+  2. What is a kernel?
+  3. What is Lunix? What does it do?
+  4. If Linux is free and open source software, how do programmers working on such software make money?
+
+
+** Homework 3
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+The following file system is commonly seen in a Linux environment. When you log on, normally your home directory will be /home/yourLoginID. Tom Green logged on using his login ID 02TG11.
+
+[[./img/linux.png]]
+
+Answer the following questions:
+
+1. What is the full path to the English directory?
+
+2. What command does Tom need to find out where the current directory is in
+ the file system?
+
+3. Tom wants to create another directory for his subject Maths under his own home directory. What command does he need?
+
+4. Tom has a file named “MathsExecise.txt” under his home directory. What command allows him to move this file into the new Maths directory he just created?
+
+5. Under his home directory, Tom used “cd Maths” to navigate to the Maths directory. After he has done some work, he needs to move back to his home directory. What is the shortest command Tom can use?
+
+6. Once Tom moved to his home directory, he used the command “touch myCSHomeWork.txt” to create a new file. He then used “emacs myCSHomeWork.txt” to edit the file. After he has done editing, he needs to save and close emacs. What emacs key combinations (in order) should he use?
+
+7. Tom later wants to find out if his myCSHomeWork.txt contains the word “algebra”. Without opening this file, how does Tom find it out?
