@@ -34,6 +34,11 @@
 :HTML_CONTAINER_CLASS: link-heading
 :END:
 
+* [[file:pages/6_Lesson.html][Week 6 - Rockin' RegEx]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
+
 * [[file:pages/homework.html][Homeworks]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading

@@ -107,9 +107,8 @@
 
   1. Linux is a free and open source OS.  What does it mean by open source?
   2. What is a kernel?
-  3. What is Lunix? What does it do?
+  3. What is Linux? What does it do?
   4. If Linux is free and open source software, how do programmers working on such software make money?
-
 
 ** Homework 3
 :PROPERTIES:
